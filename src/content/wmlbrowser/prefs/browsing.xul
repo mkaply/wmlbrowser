@@ -41,7 +41,7 @@
 
 <page xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
       xmlns:html="http://www.w3.org/1999/xhtml"
-      headertitle="wmlbrowser v0.7.28"
+      headertitle="wmlbrowser v0.7.29"
       orient="vertical"
       onload="init('chrome://wmlbrowser/content/prefs/browsing.xul');">
 

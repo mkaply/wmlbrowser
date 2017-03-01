@@ -4,7 +4,7 @@
      xmlns:em="http://www.mozilla.org/2004/em-rdf#">
   <Description about="urn:mozilla:install-manifest">
     <em:name>wmlbrowser</em:name>
-    <em:version>0.7.28</em:version>
+    <em:version>0.7.29</em:version>
     <em:description>Display WML (Wireless Markup Language) content.</em:description>
     <em:creator>Matthew Wilson</em:creator>
     <em:contributor>Raoul Nakhmanson-Kulish</em:contributor>
@@ -17,6 +17,7 @@
     <em:contributor>Karsten Düsterloh (German translation)</em:contributor>
     <em:contributor>Intars Students (Latvian translation)</em:contributor>
     <em:contributor>ketanov</em:contributor>
+    <em:contributor>Michael Kaply</em:contributor>
     <em:homepageURL>http://wmlbrowser.mozdev.org</em:homepageURL>
     <em:updateURL>http://wmlbrowser.mozdev.org/wmlbrowser-update.rdf</em:updateURL>
     <em:updateKey>MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCzP38134cT5ixg+XHqM19ASjsbnoe1l5V0Bs5l8Yzu/rv/X5wWppbNTH/EPQlol4BZ8RH+nW1WCJii3ZR4htG//trgezb9WOwoXQVDxeVwDhQdjXUqDMgKs5UZFdohW8XKBpsIY12tB8WZieOjaal9YL5ygvk+BUuc0xIedXR8DQIDAQAB</em:updateKey>
