@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<wml>
+<card ontimer="timer-example-2.wml" title="Timer test page 1">
+<timer value="100"/>
+<p>
+This timer should expire in approximately 10 seconds and a new document should be loaded
+</p>
+</card>
+</wml>

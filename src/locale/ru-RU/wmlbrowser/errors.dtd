@@ -1,0 +1,5 @@
+﻿<!ENTITY errorTitle "ошибка wmlbrowser">
+<!ENTITY shortErrorText "wmlbrowser не может интерпретировать эту страницу.">
+<!ENTITY longErrorText "Эта страница была успешно загружена, но wmlbrowser не может ее интерпретировать.">
+<!ENTITY showDetails "Показать информацию об ошибке">
+<!ENTITY hideDetails "Скрыть информацию об ошибке">

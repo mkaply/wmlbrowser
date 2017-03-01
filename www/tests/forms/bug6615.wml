@@ -1,0 +1,18 @@
+<?xml version="1.0"?><!DOCTYPE wml PUBLIC "-//WAPFORUM//DTD WML 1.1//EN"
+"http://www.wapforum.org/DTD/wml_1.1.xml">
+<wml>
+<card title="Form memory test case">
+<p>In early versions of wmlbrowser, form items remembered their values for too long. So if you submitted a form, then went back, and resubmitted the form with different values, then the old values would be submitted to the server.</p>
+<p>Metars:
+<input type="text" name="imet" value="" />
+TAFs: <input type="text" name="itaf"/>
+RawMetars: <input type="text" name="irmet"/>
+</p>
+<do type="accept" name="SUBMIT" label="SUBMIT">
+<go href="http://wmlbrowser.mozdev.org/tests/wml/form-submission-result.html" method="get">
+<postfield name="met" value="$imet"/>
+<postfield name="taf" value="$itaf"/>
+<postfield name="rmet" value="$irmet"/>
+</go></do>
+</card></wml>
+

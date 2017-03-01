@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE wml PUBLIC "-//WAPFORUM//DTD WML 1.3//EN" "http://www.wapforum.org/DTD/wml13.dtd">
+
+<wml>
+  <card id="card1" title="Onenterforward Test">
+    <p>
+      This is Card 1.<br/><br/>
+      <a href="#card2">Next Card</a>
+    </p>
+  </card>
+
+  <card id="card2" title="Onenterforward Test 2">
+    <onevent type="onenterforward">
+      <go href="#card3"/>
+    </onevent>
+    <onevent type="onenterbackward">
+      <go href="#card1" />
+    </onevent>
+    <p>
+      This is Card 2 (the intermediate card). It is skipped over in both directions.
+    </p>
+  </card>
+
+  <card id="card3" title="Onenterforward Test 3">
+    <p>
+      This is Card 3.<br/><br/>
+      <anchor>
+        <prev/>
+        Go Back
+      </anchor>
+    </p>
+  </card>
+</wml>

@@ -1,0 +1,6 @@
+<!ENTITY wmlButtonLabelText "WML režīms">
+<!ENTITY wmlButtonTooltipText "Vai pārlūkam jāsaka mājaslapām, kad tas saprot WML">
+<!ENTITY wmlOnLabelText "WML ieslēgts">
+<!ENTITY wmlOffLabelText "WML izslēgts">
+<!ENTITY wmlOnTooltipText "Teikt mājaslapām, kad pārlūks saprot WML">
+<!ENTITY wmlOffTooltipText "Teikt mājaslapām, kad pārlūks nesaprot WML">

@@ -1,0 +1,17 @@
+<!ENTITY help "Palīdzība">
+<!ENTITY helpURL "http://wmlbrowser.mozdev.org/help/lv-LV/options.html">
+<!ENTITY helpAccesskey "H">
+
+<!ENTITY httpAcceptLabel "Informācijas sūtīšana serverim">
+<!ENTITY httpAcceptCheckboxText "Vai pārlūkam jāsaka mājaslapām, kad tas saprot WML">
+<!ENTITY httpAcceptCheckboxShortText "Vai pārlūkam jāsaka mājaslapām, kad tas saprot WML">
+<!ENTITY httpAcceptAccesskey "T">
+<!ENTITY httpAcceptWarning "(Nepieciešams, lai dažas lapas sāktu strādāt, bet ir ziņots, kad nestrādā iekš Hotmail.)">
+<!ENTITY httpAcceptButtonDescription "Tu arī vari pievienot rīku joslas pogu, lai kontrolētu šo funkciju.">
+<!ENTITY httpAcceptButtonLabel "Parādīt rīku joslas pogu">
+
+<!ENTITY loadWmlFilesLabel "Failu atvēršana no Tava datora">
+<!ENTITY loadWmlFilesAccesskey "L">
+<!ENTITY loadWmlFilesCheckboxTest "Atver .wml failus no datora kā WML">
+
+<!-- vim: set encoding=utf-8 guifont=Courier_New: -->

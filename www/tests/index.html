@@ -1,0 +1,87 @@
+<h3>WML display tests</h3>
+<h4>Basic display tests</h4>
+<ol class="nospace">
+    <li><a href="basic/single-card.wml">Test of a single card deck</a>
+    <li><a href="basic/two-cards.wml">Simple test of multiple cards in a deck</a>
+    <li><a href="basic/text-decoration.wml">Test of text styling</a> <a href="screenshots/text-decoration.png">[screenshot]</a>
+    <li><a href="basic/png-support.wml">Image support (PNG)</a> <a href="screenshots/png-support.png">[screenshot]</a>
+    <li><a href="basic/vertical-scrolling.wml">Vertical scrolling test</a>
+</ol>
+
+<h4>Navigation tests</h4>
+<ol class="nospace">
+    <li><a href="navigation/do-go.wml">Test of DO element containing GO element</a>
+    <li><a href="navigation/url-with-query.wml">Specifying a URL with query parameters</a>
+    <li><a href="navigation/link-accesskey.wml">Test of 'accesskey' attribute on links</a>
+    <li><a href="navigation/relative-link-test-1.wml">Test of relative links</a>
+    <li><a href="navigation/timer-example-1.wml">Simple test of timers</a>
+    <li><a href="navigation/timer-zero-duration.wml">Timer with zero duration (should not expire)</a>
+    <li><a href="navigation/onevent-timer-with-parameters.wml">Onevent/timer test with HTTP GET and query parameters in URL</a>
+    <li><a href="navigation/onevent-timer-with-parameters-post.wml">Onevent/timer test with HTTP POST and query parameters in postfield</a>
+    <li><a href="navigation/anchor-prev.wml">'Previous' anchors</a>
+    <li><a href="navigation/link-with-var.wml">Link containing variable</a>
+</ol>
+
+<h4>Form tests</h4>
+<ol class="nospace">
+    <li><a href="forms/form-submission.wml">Form submission test</a>
+    <li><a href="forms/form-submission-post.wml">Form submission test using POST</a>
+    <li><a href="forms/onpick.wml">Test of 'onpick' attribute on options</a>
+    <li><a href="forms/password.wml">Password fields are displayed correctly</a>
+    <li><a href="forms/bug6615.wml">Appropriate lifetime of form input data</a>
+    <li><a href="forms/form-variable-action.wml">Form submission confused by a field named 'action'</a>
+    <li><a href="forms/form-with-method-variable.wml">Form submission confused by a field named 'method'</a>
+    <li><a href="forms/bug6436.wml">Test case for bug 6436</a> (currently only one of the login buttons works)
+    <li><a href="forms/ontimer-go-postfield.wml">Test with postfield inside onevent/go</a>
+    <li><a href="forms/fieldset-title.wml">Test the appearance of a fieldset with a title</a>
+</ol>
+
+<h4>Tests of multiple cards and events</h4>
+<p>It is intended to fix these in the 0.8 build.</p>
+<ol class="nospace">
+    <li><a href="multicard/onevent-onfoward-go.wml">Onevent/Onforward/Go test with postfield</a>
+    <li><a href="multicard/three-cards.wml">3 cards with onenterforward/onenterbackward navigation</a>
+    <li><a href="multicard/multicard-timers.wml">Operation of timers with multiple cards</a>
+</ol>
+
+<h4>Tests of non-ASCII characters and encodings</h4>
+<ol class="nospace">
+    <li><a href="encodings/entity.wml">Correct use of character entity references</a>
+    <li><a href="encodings/space-after-doctype.wml">Correct use of character entity references with space before '&gt;' in DOCTYPE declaration</a>
+    <li><a href="encodings/entity-error.wml">Incorrect use of character entity references</a> This page should fail to load
+    <li><a href="encodings/character-encoding.wml">Character encoding test 1, ISO-8859-1</a>
+    <li><a href="encodings/character-references.wml">Character references (e.g. Cyrillic characters)</a>
+    <li><a href="encodings/numeric-entity-references.wml">Numeric entity references</a>
+    <li><a href="encodings/whitespace.wml">Whitespace before XML declaration</a>
+    <li><a href="encodings/utf-8.wml">Character encoding test 2, UTF-8</a> (in Windows, you may need to download additional fonts to see this correctly)
+    <li><a href="encodings/bom.wml">Byte order mark test</a>
+    <li><a href="encodings/no-dtd.wml">Test of page without internal DTD declaration</a> (currently fails)
+</ol>
+
+<h4>Miscellaneous parsing issues</h4>
+<ol class="nospace">
+    <li><a href="parsing/empty-link.wml">Empty link</a>
+    <li><a href="parsing/url-decoding.wml">Ampersands in URLs</a>
+    <li><a href="parsing/not-well-formed.wml">A non-well-formed file.</a> This page should fail to load.
+</ol>
+
+<h4>WBMP images</h4>
+<p>Note: the wmlbrowser extension does not support WBMP images.</p>
+<ol class="nospace">
+    <li><a href="https://bugzilla.mozilla.org/attachment.cgi?id=107757">Sample WBMP image (bugzilla attachment)</a>
+</ol>
+
+
+<h3>External sites</h3>
+<ol class="nospace">
+    <li><a href="http://wap.gemal.dk">wap.gemal.dk</a>
+</ol>
+
+<h3>Browser integration tests</h3>
+<ol class="nospace">
+    <li>Back/Forward work
+    <li>Open in New Window/Open in New Tab work
+    <li>Reload works (currently broken for .wml files loaded from filesystem)
+    <li>View Source works
+    <li>Add to Bookmarks works
+</ol>

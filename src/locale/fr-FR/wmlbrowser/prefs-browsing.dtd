@@ -1,0 +1,17 @@
+<!ENTITY help "Aide">
+<!ENTITY helpURL "http://wmlbrowser.mozdev.org/help/fr-FR/options.html">
+<!ENTITY helpAccesskey "A">
+
+<!ENTITY httpAcceptLabel "Envoi d'information aux serveurs web">
+<!ENTITY httpAcceptCheckboxText "Faire savoir aux sites web que ce navigateur comprend le WML">
+<!ENTITY httpAcceptCheckboxShortText "Faire savoir aux sites web que ce navigateur comprend le WML">
+<!ENTITY httpAcceptAccesskey "D">
+<!ENTITY httpAcceptWarning "(Cette option est nécessaire pour faire fonctionner certains sites, mais il a été rapporté qu'elle empêchait l'accès à Hotmail.)">
+<!ENTITY httpAcceptButtonDescription "Vous pouvez aussi ajouter un bouton dans la barre d'outils pour contrôler cette option.">
+<!ENTITY httpAcceptButtonLabel "Montrer le bouton sur la barre d'outils">
+
+<!ENTITY loadWmlFilesLabel "Chargement des fichiers depuis le système de fichiers.">
+<!ENTITY loadWmlFilesAccesskey "C">
+<!ENTITY loadWmlFilesCheckboxTest "Charger les fichiers .wml depuis votre système de fichiers en tant que WML (pages wap)">
+
+<!-- vim: set encoding=utf-8: -->

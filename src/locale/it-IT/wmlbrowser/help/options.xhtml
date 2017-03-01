@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Wmlbrowser Opzioni</title>
+  <link rel="stylesheet" type="text/css" href="chrome://help/skin/helpFileLayout.css"/>
+  <style type="text/css"> .contentsBox { width: 90%; } </style>
+</head>
+<body>
+<h1>Wmlbrowser opzioni</h1>
+
+<div class="contentsBox">In questa sezione:
+  <ul>
+    <li><a href="#httpAccept">Indicare al sito web che il browser intepreta i contenuti WML</a></li>
+    <li><a href="#loadingFiles">Caricamento dei file WML dal filesystem</a></li>
+  </ul>
+</div>
+
+<p>Queste sono le opzioni di wmlbrowser che potete regolare nella versione 0.7.</p>
+
+<h2 id="httpAccept" name="httpAccept">Indicare al sito web che il browser interpreta i contenuti WML</h2>
+<h3>Cosa è questa opzione?</h3>
+<p>Ogni volta che trasmettete una richiesta per una pagina nel web, il vostro browser 
+trasmette qualcosa denominato Intestazione di accettazione, che genera 
+il contenuto in grado di essere interpretato dal browser.</p>
+<p>Se spuntate questa opzione, il vostro browser trasmetterà che è in grado di interpretare contenuti WML.</p>
+<p>Ciò può indurre il web server a trasmettergli una pagina differente.</p>
+
+<h3>Quale è l'impostazione consigliata?</h3>
+<p>L'impostazione migliore per questo, di default, è disinserito. Spuntandola,
+potreste avere pagine web non previste e riportate come errore su Hotmail.</p>
+<p>	
+Gli utenti di Firefox possono anche cambiare questa opzione aggiungendo "un tasto 
+di uso di WML" alla toolbar. (Tasto destro sulla toolbar e scegliere "Personalizza", 
+quindi trascinare il pulsante di WML (icona del telefono mobile) sulla toolbar.)</p>
+<p>Gli utenti di SeaMonkey possono abilitare il pulsante nella sezione "wmlbrowser" 
+della finestra Preferenze.</p>
+
+<hr width="50%" />
+
+<h2 id="loadingFiles" name="loadingFiles">Caricare files dal filesystem</h2>
+<h3>Quale è il problema?</h3>
+
+<p>Di default, l'estensione wmlbrowser permette Mozilla/Firefox di caricare e
+visualizza pagine WML da un web server. Ma se avete un file sul vostro disco
+con una estensione ".wml", il vostro browser non sa cosa fare con esso.</p>
+
+<p>Se selezionate questa opzione, il vostro browser saprà che un file .wml 
+contiene contenuto WML e lo visualizzerà correttamente.</p>
+
+<h3>Quale è l'impostazione consigliata?</h3>
+<p>Io suggerisco di impostare a off questa opzione a meno che non sappiate
+caricare file WML dal vostro filesystem.</p>
+
+</body>
+</html>
+<!-- vim: set encoding=utf-8: -->

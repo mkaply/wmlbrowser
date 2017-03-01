@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE wml PUBLIC "-//WAPFORUM//DTD WML 1.1//EN"
+"http://www.wapforum.org/DTD/wml_1.1.xml">
+<wml>
+  <card title="OnTimer/Go/Postfield test" id="body">
+    <p>You should be redirected after 5 seconds.</p>
+    <onevent type="ontimer">
+      <go method="get" href="http://wmlbrowser.mozdev.org/tests/wml/form-submission-result.html">
+        <postfield value="param1" name="value1"/>
+        <postfield value="param2" name="value2"/>
+      </go>
+    </onevent>
+    <timer value="50"/>
+  </card>
+
+</wml>

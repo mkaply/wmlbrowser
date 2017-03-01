@@ -1,0 +1,102 @@
+<?xml version="1.0"?> 
+<!-- ***** BEGIN LICENSE BLOCK *****
+   - Version: MPL 1.1/GPL 2.0/LGPL 2.1
+   -
+   - The contents of this file are subject to the Mozilla Public License Version
+   - 1.1 (the "License"); you may not use this file except in compliance with
+   - the License. You may obtain a copy of the License at
+   - http://www.mozilla.org/MPL/
+   -
+   - Software distributed under the License is distributed on an "AS IS" basis,
+   - WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
+   - for the specific language governing rights and limitations under the
+   - License.
+   -
+   - The Original Code is wmlbrowser.
+   -
+   - The Initial Developer of the Original Code is
+   - Matthew Wilson <matthew@mjwilson.demon.co.uk>.
+   - Portions created by the Initial Developer are Copyright (C) 2005
+   - the Initial Developer. All Rights Reserved.
+   -
+   - Contributor(s):
+   -
+   - Alternatively, the contents of this file may be used under the terms of
+   - either the GNU General Public License Version 2 or later (the "GPL"), or
+   - the GNU Lesser General Public License Version 2.1 or later (the "LGPL"),
+   - in which case the provisions of the GPL or the LGPL are applicable instead
+   - of those above. If you wish to allow use of your version of this file only
+   - under the terms of either the GPL or the LGPL, and not to allow others to
+   - use your version of this file under the terms of the MPL, indicate your
+   - decision by deleting the provisions above and replace them with the notice
+   - and other provisions required by the LGPL or the GPL. If you do not delete
+   - the provisions above, a recipient may use your version of this file under
+   - the terms of any one of the MPL, the GPL or the LGPL.
+   - ***** END LICENSE BLOCK ***** -->
+<?xml-stylesheet href="chrome://communicator/skin/" type="text/css"?>
+<?xml-stylesheet href="chrome://wmlbrowser/content/prefs/browsing.css" type="text/css"?>
+
+<!DOCTYPE page SYSTEM "chrome://wmlbrowser/locale/prefs-browsing.dtd" >
+
+<page xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+      xmlns:html="http://www.w3.org/1999/xhtml"
+      headertitle="wmlbrowser"
+      orient="vertical"
+      onload="init('chrome://wmlbrowser/content/prefs/browsingFirefox.xul');">
+
+  <script type="application/x-javascript">
+      var _elementIDs = [ "wmlbrowserHttpAcceptDefault" ];
+
+      function visitLink (aEvent) {
+          if (parent.visitLink) {
+              // Firefox
+              parent.visitLink(aEvent);
+          } else {
+              // Mozilla
+              window.open (aEvent.target.getAttribute("link"));
+          }
+      }
+
+      function openHelp (topic, helpFileURI) {
+
+          const params = Components.classes["@mozilla.org/embedcomp/dialogparam;1"]
+                                   .createInstance(Components.interfaces.nsIDialogParamBlock);
+          params.SetNumberStrings(2);
+          params.SetString(0, helpFileURI);
+          params.SetString(1, topic);
+          const ww = Components.classes["@mozilla.org/embedcomp/window-watcher;1"]
+                               .getService(Components.interfaces.nsIWindowWatcher);
+          ww.openWindow(null, "chrome://help/content/help.xul", "_blank", "chrome,all,alwaysRaised,dialog=no", params);
+
+      }
+  </script>
+  <script type="application/x-javascript" src="chrome://wmlbrowser/content/prefs/httpAccept.js"/>
+  <script type="application/x-javascript" src="chrome://wmlbrowser/content/prefs/mimeTypes.js"/>
+  <script type="application/x-javascript" src="chrome://wmlbrowser/content/prefs/browsing.js"/>
+
+  <groupbox>
+      <caption>
+          <hbox>
+              <label>&httpAcceptLabel;</label>
+          </hbox>
+      </caption>
+      <checkbox id="sendInAccept" accesskey="&httpAcceptAccesskey;" label="&httpAcceptCheckboxText;" oncommand="wmlbrowserOnAcceptChanged(this.checked)"/>
+      <html:p>&httpAcceptWarning;</html:p>
+      <data id="wmlbrowserHttpAcceptDefault" prefstring="network.http.accept.default"
+          prefattribute="value" wsm_attributes="value"/>
+  </groupbox>
+
+  <groupbox>
+      <caption>
+          <hbox>
+              <label>&loadWmlFilesLabel;</label>
+          </hbox>
+      </caption>
+      <checkbox id="loadWmlFiles" accesskey="&loadWmlFilesAccesskey;" label="&loadWmlFilesCheckboxTest;" oncommand="mimeTypesChanged(this)" />
+  </groupbox>
+
+  <hbox>
+      <button id="help" label="&help;" accesskey="&helpAccesskey;" oncommand='openHelp("wmlbrowser-prefs", "chrome://wmlbrowser/locale/help/help.rdf")' />
+  </hbox>
+
+</page>

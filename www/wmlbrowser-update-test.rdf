@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:em="http://www.mozilla.org/2004/em-rdf#">
+
+  <Description about="urn:mozilla:extension:{c4dc572a-3295-40eb-b30f-b54aa4cdc4b7}">
+
+    <!-- Firefox 1.0 format: list of all available updates -->
+    <em:updates>
+      <Seq>
+        <li resource="urn:mozilla:extension:{c4dc572a-3295-40eb-b30f-b54aa4cdc4b7}:0.6.4"/>
+      </Seq>
+    </em:updates>
+
+    <!-- Firefox 0.9 format -->
+    <em:version>0.6.4</em:version>
+    <em:updateLink>http://downloads.mozdev.org/wmlbrowser/wmlbrowser-0-6-4.xpi</em:updateLink>
+
+  </Description>
+
+  <!-- wmlbrowser 0.6.4 is compatible with 0.10 -->
+  <Description about="urn:mozilla:extension:{c4dc572a-3295-40eb-b30f-b54aa4cdc4b7}:0.6.4">
+    <em:version>0.6.4</em:version>
+    <em:targetApplication>
+      <Description>
+        <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id> <!-- Firefox -->
+        <em:minVersion>0.8</em:minVersion>
+        <em:maxVersion>0.10</em:maxVersion>
+        <em:updateLink>http://downloads.mozdev.org/wmlbrowser/wmlbrowser-0-6-4.xpi</em:updateLink>
+      </Description>
+    </em:targetApplication>
+  </Description>  
+
+</RDF>

@@ -1,0 +1,5 @@
+<!ENTITY errorTitle "wmlbrowser error">
+<!ENTITY shortErrorText "wmlbrowser couldn't interpret this page.">
+<!ENTITY longErrorText "The page was successfully downloaded, but wmlbrowser encountered an error when trying to interpret it.">
+<!ENTITY showDetails "Show details of the error">
+<!ENTITY hideDetails "Hide details of the error">

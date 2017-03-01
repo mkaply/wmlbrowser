@@ -1,0 +1,37 @@
+<script>
+<!--
+  function install (aEvent, hash)
+  {
+    var params = {
+        "wmlbrowser": {
+            URL: aEvent.target.parentNode.href,
+            Hash: hash
+        }
+    };
+    InstallTrigger.install(params);
+    return false;
+  }
+//-->
+</script>
+
+<h2 class="page-header">Installation Guide</h2>
+
+<div id=installs>
+<div class=install id=first><p><a href="http://downloads.mozdev.org/wmlbrowser/wmlbrowser-0.7.26.xpi" onclick="return install(event, 'sha256:a6492ade447aee5dcdbd690e4dc9ef9ad15e57a91b43419b9d402401e754a031')"><span class=title>Install wmlbrowser 0.7.26</span></a><br> for Firefox 3+, Seamonkey 2+, Fennec</p></div>
+</div>
+<br style="clear: both">
+
+<ol>
+    <li>You will need to allow installation from this site in the info bar which appears at the top of the screen. Then select "Install Now".
+  <center><img src='screenshots/firefox/install-xpi.png' vspace=5 alt=""></center>
+<li>Restart your browser.
+<li>Following a restart, you should check the wmlbrowser options to ensure that the system is set up as you want.
+In Firefox, use the Tools/Add-ons menu to bring up the Extensions list.
+<center><img src='screenshots/firefox/extensions.png' alt='Firefox Extensions window' vspace=5></center>
+Next select <b>wmlbrowser</b> and then launch the 'Options' button, via the Options button.
+<center><img src='screenshots/firefox/options.png' alt='wmlbrowser options window'></center>
+<a href="/help/options.html">See the Help page for the description of the available options.</a>
+</ol>
+
+<p><b><i>Please feel free to email any questions or suggestions about this
+installation guide to <a href="/list.html">the wmlbrowser mailing list.</a></p>

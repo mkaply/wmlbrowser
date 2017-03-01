@@ -1,0 +1,53 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Možnosti rozšírenia Wmlbrowser</title>
+</head>
+<body>
+<h1>Možnosti rozšírenia wmlbrowser</h1>
+
+<div class="contentsBox">V tejto časti:
+  <ul>
+    <li><a href="#httpAccept">Oznámiť webovým stránkam, že prehliadač rozumie obsahu WML</a></li>
+    <li><a href="#loadingFiles">Načítanie súborov WML zo&nbsp;systému súborov</a></li>
+  </ul>
+</div>
+
+<p>Nachádzajú sa tu možnosti, ktoré je možné nastaviť v&nbsp;rozšírení wmlbrowser, verzia&nbsp;0.7.</p>
+
+<h2 id="httpAccept" name="httpAccept">Oznámiť webovým stránkam, že prehliadač rozumie obsahu WML</h2>
+<h3>Čo to znamená?</h3>
+<p>Vždy, keď odosielate požiadavku na webovú stránku, prehliadač posiela
+niečo, čo sa nazýva hlavička Accept. Oznamuje ňou, akému druhu obsahu prehliadač
+rozumie.</p>
+<p>Ak nastavíte túto možnosť, prehliadač oznámi webovým stránkam, že rozumie WML.</p>
+<p>Tak sa môže stať, že webový server vám odošle inú stránku.</p>
+
+<h3>Aké je odporúčané nastavenie?</h3>
+<p>V&nbsp;predvolenom nastavení je táto možnosť vypnutá. Jej zapnutie môže znamenať, že
+načítate webové stránky, ktoré ste neočakávali. Bol nahlásený aj konfikt so&nbsp;službou
+Hotmail.</p>
+<p>Používatelia Firefoxu môžu toto nastavenie meniť aj po&nbsp;pridaní tlačidla "Režim WML"
+na panel s&nbsp;nástrojmi. (Kliknite pravým tlačidlom na&nbsp;panel s&nbsp;nástrojmi a&nbsp;vyberte možnosť "Prispôsobiť..."; potom
+pretiahnite tlačidlo WML (ikona "W") na&nbsp;panel s&nbsp;nástrojmi.)</p>
+<p>Používatelia programu SeaMonkey môžu tlačidlo aktivovať v časti "wmlbrowser" v&nbsp;okne
+Predvoľby.</p>
+
+<hr width="50%" />
+
+<h2 id="loadingFiles" name="loadingFiles">Načítanie súborov WML zo&nbsp;systému súborov</h2>
+<h3>V&nbsp;čom je problém?</h3>
+
+<p>Podľa predvoleného nastavenia rozšírenie wmlbrowser umožňuje Mozille/Firefoxu
+načítať a&nbsp;zobraziť stránky WML z&nbsp;webového servera. Ak je ale na&nbsp;vašom lokálnom disku súbor
+s&nbsp;príponou ".wml", prehľadávač nevie, čo s&nbsp;ním urobiť.</p>
+
+<p>Ak označíte túto možnosť, prehliadač bude vedieť, že súbor .wml má obsah
+WML a&nbsp;patrične ho zobrazí.</p>
+
+<h3>Aké je odporúčané nastavenie?</h3>
+<p>Odporúčame nechať túto možnosť vypnutú, ak viete, že nebudete potrebovať
+načítať súboryy WML zo&nbsp;systému súborov.</p>
+
+</body>
+</html>
+<!-- vim: set encoding=utf-8:guifont=Courier_New: -->

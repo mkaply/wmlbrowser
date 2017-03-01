@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE wml PUBLIC "-//WAPFORUM//DTD WML 1.1//EN" "http://www.wapforum.org/DTD/wml_1.1.xml">
+<wml>
+<card title="Onevent/timer test navigating to URL with parameters and HTTP POST">
+<p>After five seconds the timer should expire, and a new page should be loaded. The parameter test will be POSTed with value "success" (the extension LiveHttpHeaders can be used to verify this).</p>
+<onevent type="ontimer">
+   <go method="post" href="http://wmlbrowser.mozdev.org/tests/">
+       <postfield name="test" value="success" />
+   </go>
+</onevent>
+<timer value="50"/>
+</card>
+</wml>
+
+

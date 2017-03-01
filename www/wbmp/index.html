@@ -1,0 +1,41 @@
+<script>
+<!--
+  function install (aEvent, hash)
+  {
+    var params = {
+        "wbmpviewer": {
+            URL: aEvent.target.href,
+            Hash: hash
+        }
+    };
+    InstallTrigger.install(params);
+    return false;
+  }
+//-->
+</script>
+<style type="text/css">
+.install { background-color: #11bb11; color: white; border: double 7px white ; padding: 0.5em; text-align: center}
+.title { font-weight: bold ; font-size: larger }
+.install a { color: white; }
+#first { float : left; width: 40%}
+#second { float : right; width: 40% }
+</style>
+
+<h2>WBMP support in Firefox</h2>
+
+<div id=installs>
+<div class=install id=first><p><a href="http://downloads.mozdev.org/wmlbrowser/wbmpviewer-0.2.7.xpi" onclick="return install(event, 'sha256:f2087b6ebd311e7ea41259ed21ceb593d672ab3f20cb25a960b406c03f1d229c')"><span class=title>Install wbmpviewer 0.2.7</span></a><br> for Firefox 3.0 on Windows/Linux</p></div>
+<div class=install id=second><p><a href="http://downloads.mozdev.org/wmlbrowser/wbmpviewer-1.1.0.xpi" onclick="return install(event, 'sha256:1ae58ab2e1da0a7a811b9a1f69abb89630876fbaf99b05a05d930268ad8e11a4')"><span class=title>Install wbmpviewer 1.1.0</span></a><br> for Firefox 3.5 on Windows/Linux</p></div>
+</div>
+<br style="clear: both">
+
+<p>WBMP is an image format used on wireless devices alongside WML.</p>
+
+<p>Currently there are XPIs available for Firefox 3 or 3.5 on Windows
+and Linux only. I do not have the resources to create a Mac version.</p>
+
+<p>Please direct comments to the <a href="/list.htm">mailing list</a>.</p>
+
+<ul>
+<li><a href="http://www.thepcmanwebsite.com/wap_images.shtml">Sample WBMP images (external site)</a>
+</ul>

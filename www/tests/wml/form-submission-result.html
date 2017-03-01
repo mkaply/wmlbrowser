@@ -1,0 +1,20 @@
+<p>Results:
+<?php
+
+// Copied from clav's database/extensionroom code as described on 
+// project_owner's mailing list
+if (strpos($_SERVER["REQUEST_URI"], "?")) {
+        $QueryString = explode("?", $_SERVER["REQUEST_URI"]);
+        $QueryArray = explode("&", $QueryString[1]);
+        foreach ($QueryArray as $QueryItem) {
+                $QuerySegment = explode("=", $QueryItem);
+                $_GET[$QuerySegment[0]] = $QuerySegment[1];
+                echo "Got ";
+                echo $QuerySegment[0];
+                echo "=";
+                echo $QuerySegment[1];
+                echo ".<br>";
+        }
+}
+?>
+</p>

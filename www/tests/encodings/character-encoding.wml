@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<!DOCTYPE wml PUBLIC "-//WAPFORUM//DTD WML 1.1//EN" "http://www.wapforum.org/DTD/wml_1.1.xml">
+<wml>
+<card title="Character encoding test">
+<p>This page, encoded in ISO-8859-1, should be able to show the following characters correctly:
+one-half ½, lower-case a acute á
+</p>
+</card>
+</wml>

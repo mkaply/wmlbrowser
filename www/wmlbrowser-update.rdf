@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:em="http://www.mozilla.org/2004/em-rdf#">
+
+  <Description about="urn:mozilla:extension:{c4dc572a-3295-40eb-b30f-b54aa4cdc4b7}"
+       em:signature="MIGTMA0GCSqGSIb3DQEBDQUAA4GBAHjlEm6yZO3mTvuWA/w0+YZ4ox9ZCP3QOdbVzMFsHCtE47AUvy14C2x4SMbWL9vzXP8SKyEF/2Y6IA6287SoQq4EJjOSibnlGjSg6pCDv0AhLoetPbnBdkTMSQzuhdC7d0GFfUN6O6rGi0bhvMmt5EWdugvm93T4o8gfwZxhElUB">
+    <em:updates>
+      <Seq>
+          <li resource="urn:mozilla:extension:{c4dc572a-3295-40eb-b30f-b54aa4cdc4b7}:0.7.26"/>
+          <li resource="urn:mozilla:extension:{c4dc572a-3295-40eb-b30f-b54aa4cdc4b7}:0.7.28"/>
+      </Seq>
+    </em:updates>
+  </Description>
+
+  <Description about="urn:mozilla:extension:{c4dc572a-3295-40eb-b30f-b54aa4cdc4b7}:0.7.26"
+     em:signature="MIGTMA0GCSqGSIb3DQEBDQUAA4GBACzhxmxZ2p0wTMcaQN234q3a9ICtYzv++aSHjSTj128WvlN6K8fr9qkRW7ekHvu5m02/iY9p5hr0UeNZG/6NBaxAD5TKBidVrHstOby/MFv8uidtB6SYIAen2BNPoPXnYt8bDJhyRBJn22rvIA926CHw1kCUUbVxIyZjLnsSbhMN">
+    <em:version>0.7.26</em:version>
+    <em:targetApplication>
+      <Description>
+        <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id> <!-- Firefox -->
+        <em:minVersion>3.0</em:minVersion>
+        <em:maxVersion>10.0.*</em:maxVersion>
+        <em:updateHash>sha256:a6492ade447aee5dcdbd690e4dc9ef9ad15e57a91b43419b9d402401e754a031</em:updateHash>
+        <em:updateLink>http://downloads.mozdev.org/wmlbrowser/wmlbrowser-0.7.26.xpi</em:updateLink>
+        <em:updateInfoURL>http://wmlbrowser.mozdev.org/releaseNotes/wmlbrowser.xhtml</em:updateInfoURL>
+      </Description>
+    </em:targetApplication>
+    <em:targetApplication>
+      <Description>
+        <em:id>{92650c4d-4b8e-4d2a-b7eb-24ecf4f6b63a}</em:id> <!-- Seamonkey -->
+        <em:minVersion>2.0</em:minVersion>
+        <em:maxVersion>2.6.*</em:maxVersion>
+        <em:updateHash>sha256:a6492ade447aee5dcdbd690e4dc9ef9ad15e57a91b43419b9d402401e754a031</em:updateHash>
+        <em:updateLink>http://downloads.mozdev.org/wmlbrowser/wmlbrowser-0.7.26.xpi</em:updateLink>
+        <em:updateInfoURL>http://wmlbrowser.mozdev.org/releaseNotes/wmlbrowser.xhtml</em:updateInfoURL>
+      </Description>
+    </em:targetApplication>
+  </Description>
+
+  <Description about="urn:mozilla:extension:{c4dc572a-3295-40eb-b30f-b54aa4cdc4b7}:0.7.28"
+     em:signature="MIGTMA0GCSqGSIb3DQEBDQUAA4GBALBQUiNdBd4PQqNFb3bWcYQS2Ab7ERZu1/LthmkmX3WY2ZaA7FEaPY95WonD0L0wZWHyzFMkpFQTMInhSNFP6Ck4pVSkU7BkeWjodOzurNiP1H+NwTCM3nx150BumoNPCg1TXrmDH3Z5+xQXLR6EFbiXQAofOy0m5jyBpUbtZABO">
+    <em:version>0.7.28</em:version>
+    <em:targetApplication>
+      <Description>
+        <em:id>{a23983c0-fd0e-11dc-95ff-0800200c9a66}</em:id> <!-- Fennec -->
+        <em:minVersion>7.0</em:minVersion>
+        <em:maxVersion>9.0.*</em:maxVersion>
+        <em:updateHash>sha256:261319602aac63fd35d6d07793722be1fbda8927992ff901eac2a6bcc265564e</em:updateHash>
+        <em:updateLink>http://downloads.mozdev.org/wmlbrowser/wmlbrowser-0.7.28.xpi</em:updateLink>
+        <em:updateInfoURL>http://wmlbrowser.mozdev.org/releaseNotes/wmlbrowser.xhtml</em:updateInfoURL>
+      </Description>
+    </em:targetApplication>
+  </Description>
+
+</RDF>

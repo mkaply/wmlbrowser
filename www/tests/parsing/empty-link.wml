@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<!DOCTYPE wml PUBLIC "-//WAPFORUM//DTD WML 1.1//EN"
+"http://www.wapforum.org/DTD/wml_1.1.xml">
+<wml>
+<card id="main" title="Test of empty links">
+<p>The following paragraph contains an empty link, followed by some text. The text should not be part of the link.</p>
+<p><a href="../index.html"></a>Text after link</p>
+</card>
+</wml>

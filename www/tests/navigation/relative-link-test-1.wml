@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!DOCTYPE wml PUBLIC "-//WAPFORUM//DTD WML 1.1//EN" "http://www.wapforum.org/DTD/wml_1.1.xml">
+<wml>
+<card title="Relative links - page 1">
+    <p>This tests the use of relative links and should display
+    a second WML page if successful.</p>
+    <a href='relative-link-test-2.wml'>Test of relative links with &lt;a&gt;</a>
+    <do label='Test of relative links with do/go' type='accept'>
+        <go href='relative-link-test-2.wml'/>
+    </do>
+</card>
+</wml>

@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE wml PUBLIC "-//WAPFORUM//DTD WML 1.1//EN" "http://www.wapforum.org/DTD/wml_1.1.xml">
+<wml>
+    <card title="Text decoration test">
+        <p>This is a test of text styling.</p>
+        <p>
+        <em>emphasis</em>
+        <strong>strong</strong>
+        <i>italic</i>
+        <b>bold</b>
+        <u>underlined</u>
+        <big>big</big>
+        <small>small</small>
+        <b><i>bold + italic</i></b>
+        <big><em>big + emphasised</em></big>
+        </p>
+
+        <pre>pre-formatted text</pre>
+
+<p align="left">A left-aligned paragraph. A left-aligned paragraph. A left-aligned paragraph. A left-aligned paragraph. A left-aligned paragraph. A left-aligned paragraph. A left-aligned paragraph.A left-aligned paragraph.  A left-aligned paragraph. A left-aligned paragraph. A left-aligned paragraph. A left-aligned paragraph. A left-aligned paragraph. A left-aligned paragraph.</p>
+
+<p align="right">A right-aligned paragraph. A right-aligned paragraph. A right-aligned paragraph. A right-aligned paragraph. A right-aligned paragraph. A right-aligned paragraph. A right-aligned paragraph.A right-aligned paragraph.  A right-aligned paragraph. A right-aligned paragraph. A right-aligned paragraph. A right-aligned paragraph. A right-aligned paragraph. A right-aligned paragraph.</p>
+
+<p align="center">A center-aligned paragraph. A center-aligned paragraph. A center-aligned paragraph. A center-aligned paragraph. A center-aligned paragraph. A center-aligned paragraph. A center-aligned paragraph.A center-aligned paragraph.  A center-aligned paragraph. A center-aligned paragraph. A center-aligned paragraph. A center-aligned paragraph. A center-aligned paragraph. A center-aligned paragraph.</p>
+
+    </card>
+</wml>

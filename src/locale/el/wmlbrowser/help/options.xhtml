@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ***** BEGIN LICENSE BLOCK *****
+   - Version: MPL 1.1/GPL 2.0/LGPL 2.1
+   -
+   - The contents of this file are subject to the Mozilla Public License Version
+   - 1.1 (the "License"); you may not use this file except in compliance with
+   - the License. You may obtain a copy of the License at
+   - http://www.mozilla.org/MPL/
+   -
+   - Software distributed under the License is distributed on an "AS IS" basis,
+   - WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
+   - for the specific language governing rights and limitations under the
+   - License.
+   -
+   - The Original Code is a translation for the wmlbrowser extension.
+   -
+   - The Initial Developer of the Original Code is
+   - Jimmy Angelakos.
+   - Portions created by the Initial Developer are Copyright (C) 2006
+   - the Initial Developer. All Rights Reserved.
+   -
+   - Contributor(s):
+   -     Elisabeth Rascle
+   -
+   - Alternatively, the contents of this file may be used under the terms of
+   - either the GNU General Public License Version 2 or later (the "GPL"), or
+   - the GNU Lesser General Public License Version 2.1 or later (the "LGPL"),
+   - in which case the provisions of the GPL or the LGPL are applicable instead
+   - of those above. If you wish to allow use of your version of this file only
+   - under the terms of either the GPL or the LGPL, and not to allow others to
+   - use your version of this file under the terms of the MPL, indicate your
+   - decision by deleting the provisions above and replace them with the notice
+   - and other provisions required by the LGPL or the GPL. If you do not delete
+   - the provisions above, a recipient may use your version of this file under
+   - the terms of any one of the MPL, the GPL or the LGPL.
+   -
+   - ***** END LICENSE BLOCK ***** -->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Επιλογές wmlbrowser</title>
+  <link rel="stylesheet" type="text/css" href="chrome://help/skin/helpFileLayout.css"/>
+  <style type="text/css"> .contentsBox { width: 90%; } </style>
+</head>
+<body>
+<h1>Επιλογές wmlbrowser</h1>
+
+<div class="contentsBox">Σε αυτό το τμήμα:
+  <ul>
+    <li><a href="#httpAccept">Να δηλώνει ο φυλλομετρητής στις τοποθεσίες ιστού ότι καταλαβαίνει περιεχόμενο σε WML</a></li>
+    <li><a href="#loadingFiles">Φόρτωση αρχείων από το σύστημα αρχείων</a></li>
+  </ul>
+</div>
+
+<p>Εδώ βρίσκονται οι επιλογές που μπορείτε να ρυθμίσετε στην έκδοση 0.7 του
+wmlbrowser.</p>
+
+<h2 id="httpAccept" name="httpAccept">Να δηλώνει ο φυλλομετρητής στις τοποθεσίες ιστού ότι καταλαβαίνει περιεχόμενο σε WML</h2>
+<h3>Τι σημαίνει αυτό;</h3>
+<p>Όποτε στέλνετε αίτημα για μια σελίδα στον ιστό, ο φυλλομετρητής σας
+στέλνει κάτι που ονομάζεται Επικεφαλίδα Αποδοχής, το οποίο δηλώνει τι
+είδη περιεχομένου καταλαβαίνει ο φυλλομετρητής.</p>
+<p>Αν ενεργοποιήσετε αυτή την επιλογή, ο φυλλομετρητής σας θα δηλώνει στις
+τοποθεσίες ιστού ότι καταλαβαίνει WML.</p>
+<p>Αυτό μπορεί να προκαλέσει την αποστολή μιας διαφορετικής σελίδας από
+τον εξυπηρετητή ιστού.</p>
+
+<h3>Ποιά είναι η προτεινόμενη ρύθμιση;</h3>
+<p>Η καλύτερη προεπιλεγμένη ρύθμιση για αυτό είναι να είναι
+απενεργοποιημένο. Η ενεργοποίησή του μπορεί να σημαίνει πως θα λάβετε
+σελίδες που δεν περιμένατε και έχει αναφερθεί πως δημιουργεί πρόβλημα
+με το Hotmail.</p>
+<p>Οι χρήστες Firefox μπορούν επίσης να αλλάξουν αυτή τη ρύθμιση
+προσθέτοντας ένα κουμπί "Λειτουργία WML" στην εργαλειοθήκη πλοήγησης.
+(Κάντε δεξί κλικ στη μπάρα εργαλείων, επιλέξτε "Προσαρμογή" και μετά
+σύρετε το κουμπί WML (εικονίδιο κινητού τηλεφώνου) στην εργαλειοθήκη.</p>
+<p>Οι χρήστες SeaMonkey μπορούν να ενεργοποιήσουν το κουμπί στο τμήμα
+"wmlbrowser" του παραθύρου Προτιμήσεων.</p>
+
+<hr width="50%" />
+
+<h2 id="loadingFiles" name="loadingFiles">Φόρτωση αρχείων από το σύστημα αρχείων</h2>
+<h3>Ποιό είναι το πρόβλημα;</h3>
+
+<p>Εξ ορισμού, η προέκταση wmlbrowser επιτρέπει στο Mozilla/Firefox να
+φορτώνει και να παρουσιάζει σελίδες WML από έναν εξυπηρετητή ιστού.
+Αν όμως έχετε ένα αρχείο με προέκταση ".wml" στον τοπικό σας δίσκο, ο
+φυλλομετρητής σας δεν ξέρει τι να κάνει με αυτό. Αν ενεργοποιήσετε αυτή
+την επιλογή, ο φυλλομετρητής σας θα ξέρει πως το τοπικό αρχείο .wml
+έχει περιεχόμενο WML και θα το παρουσιάσει σωστά.</p>
+
+<h3>Ποιά είναι η προτεινόμενη ρύθμιση;</h3>
+
+<p>Προτείνεται να αφήσετε αυτή την ρύθμιση απενεργοποιημένη εκτός αν
+ξέρετε πως χρειάζεστε να φορτώνετε αρχεία WML από το σύστημα αρχείων σας.</p>
+
+</body>
+</html>
+<!-- vim: set encoding=utf-8 guifont=Courier_New: -->

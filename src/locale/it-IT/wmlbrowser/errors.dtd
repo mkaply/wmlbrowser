@@ -1,0 +1,5 @@
+<!ENTITY errorTitle "wmlbrowser errore">
+<!ENTITY shortErrorText "wmlbrowser non ha potuto interpretare questa pagina.">
+<!ENTITY longErrorText "La pagina è stata caricata con successo, ma il wmlbrowser ha incontrato un errore provando ad interpretarla.">
+<!ENTITY showDetails "Visualizza i dettagli degli errori">
+<!ENTITY hideDetails "Nascondi i dettagli degli errori">

@@ -1,0 +1,8 @@
+<!ENTITY wmlButtonLabelText "Režim WML">
+<!ENTITY wmlButtonTooltipText "Prepínač funkcie oznámenia webovým stránkam, že prehliadač podporuje WML">
+<!ENTITY wmlOnLabelText "WML zapnuté">
+<!ENTITY wmlOffLabelText "WML vypnuté">
+<!ENTITY wmlOnTooltipText "Oznámiť webovým stránkam, že prehliadač podporuje WML">
+<!ENTITY wmlOffTooltipText "Neoznamovať webovým stránkam, že prehliadač podporuje WML">
+
+<!-- vim: set encoding=utf-8: -->

@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<wml>
+    <card title="Form submission test">
+        <p>This test demonstrates the correct submission of a form with a field named "method".</p>
+        Username <input type="text" name="method"/>
+        <anchor>Test
+            <go href="http://wmlbrowser.mozdev.org/tests/wml/form-submission-result.html" >
+              <postfield name="method" value="$method" />
+            </go>
+        </anchor>
+    </card>
+</wml>

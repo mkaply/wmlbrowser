@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<wml>
+    <card title="Test of character entity references">
+        <p>Each&nbsp;word&nbsp;is&nbsp;separated&nbsp;by&nbsp;a&nbsp;non-breaking&nbsp;space.</p>
+    </card>
+</wml>

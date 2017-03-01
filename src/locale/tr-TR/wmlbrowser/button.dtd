@@ -1,0 +1,8 @@
+<!ENTITY wmlButtonLabelText "WML durumu">
+<!ENTITY wmlButtonTooltipText "Web sitelerine tarayıcınızın WML içeriği anladığının bildirilmesi ya da bildirilmemesi">
+<!ENTITY wmlOnLabelText "WML bildir">
+<!ENTITY wmlOffLabelText "WML bildirme">
+<!ENTITY wmlOnTooltipText  "Web sunucularına bu tarayıcının WML içeriği anladığını bildirmek">
+<!ENTITY wmlOffTooltipText "Web sunucularına bu tarayıcının WML içeriği anladığını bildirmemek">
+
+<!-- vim: set encoding=utf-8: -->

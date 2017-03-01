@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<!-- vim: set encoding=utf-8: -->
+<RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:em="http://www.mozilla.org/2004/em-rdf#">
+  <Description about="urn:mozilla:install-manifest">
+    <em:name>wmlbrowser</em:name>
+    <em:version>0.7.28</em:version>
+    <em:description>Display WML (Wireless Markup Language) content.</em:description>
+    <em:creator>Matthew Wilson</em:creator>
+    <em:contributor>Raoul Nakhmanson-Kulish</em:contributor>
+    <em:contributor>Berki Yenigün (French, Turkish translations)</em:contributor>
+    <em:contributor>Iacopo Benesperi (Italian translation)</em:contributor>
+    <em:contributor>A35G (Italian translation)</em:contributor>
+    <em:contributor>SlovakSoft (Slovakian translation)</em:contributor>
+    <em:contributor>Jimmy Angelakos (Greek translation)</em:contributor>
+    <em:contributor>Elisabeth Rascle (Greek translation)</em:contributor>
+    <em:contributor>Karsten Düsterloh (German translation)</em:contributor>
+    <em:contributor>Intars Students (Latvian translation)</em:contributor>
+    <em:contributor>ketanov</em:contributor>
+    <em:homepageURL>http://wmlbrowser.mozdev.org</em:homepageURL>
+    <em:updateURL>http://wmlbrowser.mozdev.org/wmlbrowser-update.rdf</em:updateURL>
+    <em:updateKey>MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCzP38134cT5ixg+XHqM19ASjsbnoe1l5V0Bs5l8Yzu/rv/X5wWppbNTH/EPQlol4BZ8RH+nW1WCJii3ZR4htG//trgezb9WOwoXQVDxeVwDhQdjXUqDMgKs5UZFdohW8XKBpsIY12tB8WZieOjaal9YL5ygvk+BUuc0xIedXR8DQIDAQAB</em:updateKey>
+    <em:id>{c4dc572a-3295-40eb-b30f-b54aa4cdc4b7}</em:id>
+    <!-- Firefox -->
+    <em:targetApplication>
+      <Description>
+        <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
+        <em:minVersion>3.0</em:minVersion>
+        <em:maxVersion>10.0.*</em:maxVersion>
+      </Description>
+    </em:targetApplication>
+    <!-- Seamonkey -->
+    <em:targetApplication>
+      <Description>
+        <em:id>{92650c4d-4b8e-4d2a-b7eb-24ecf4f6b63a}</em:id>
+        <em:minVersion>2.0</em:minVersion>
+        <em:maxVersion>2.6.*</em:maxVersion>
+      </Description>
+    </em:targetApplication>
+    <!-- Fennec -->
+    <em:targetApplication>
+      <Description>
+        <em:id>{a23983c0-fd0e-11dc-95ff-0800200c9a66}</em:id>
+        <em:minVersion>7.0</em:minVersion>
+        <em:maxVersion>9.0.*</em:maxVersion>
+      </Description>
+    </em:targetApplication>
+    <em:file>
+      <Description about="urn:mozilla:extension:file:wmlbrowser.jar">
+        <em:package>content/wmlbrowser/</em:package>
+        <em:skin>skin/wmlbrowser/</em:skin>
+        <em:locale>locale/en-US/wmlbrowser/</em:locale>
+        <em:locale>locale/fr-FR/wmlbrowser/</em:locale>
+        <em:locale>locale/it-IT/wmlbrowser/</em:locale>
+        <em:locale>locale/sk/wmlbrowser/</em:locale>
+        <em:locale>locale/tr-TR/wmlbrowser/</em:locale>
+        <em:locale>locale/el/wmlbrowser/</em:locale>
+        <em:locale>locale/de/wmlbrowser/</em:locale>
+        <em:locale>locale/ru-RU/wmlbrowser/</em:locale>
+        <em:locale>locale/lv-LV/wmlbrowser/</em:locale>
+      </Description>
+    </em:file>
+    <em:optionsURL>chrome://wmlbrowser/content/prefs/firefox-1-5-prefs.xul</em:optionsURL>
+  </Description>
+</RDF>
+<!-- vim: set encoding=utf-8: -->

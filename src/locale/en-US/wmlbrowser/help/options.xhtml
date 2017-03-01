@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Wmlbrowser Options</title>
+  <link rel="stylesheet" type="text/css" href="chrome://help/skin/helpFileLayout.css"/>
+  <style type="text/css"> .contentsBox { width: 90%; } </style>
+</head>
+<body>
+<h1>Wmlbrowser options</h1>
+
+<div class="contentsBox">In this section:
+  <ul>
+    <li><a href="#httpAccept">Tell web sites that the browser understands WML content</a></li>
+    <li><a href="#loadingFiles">Loading WML files from the filesystem</a></li>
+  </ul>
+</div>
+
+<p>Here are the options which you can set in wmlbrowser in version 0.7.</p>
+
+<h2 id="httpAccept" name="httpAccept">Tell web sites that the browser understands WML content</h2>
+<h3>What does this mean?</h3>
+<p>Whenever you send a request for a page to the web, your browser sends
+something called an Accept header, which says what kinds of content the browser
+understands.</p>
+<p>If you set this option, your browser will tell web sites that it understands WML.</p>
+<p>This can cause the web server to send you a different page.</p>
+
+<h3>What's the recommended setting?</h3>
+<p>The best default setting for this is off. Turning it on may mean that you
+get web pages which you weren't expecting, and it's been reported to break
+Hotmail.</p>
+<p>Firefox users can also change this setting by adding a "WML mode" button to
+the toolbar. (Right-click on the toolbar and select "Customise", then drag
+the WML button (mobile phone icon) onto the toolbar.)</p>
+<p>SeaMonkey users can enable the button in the "wmlbrowser" section of the the
+Preferences window.</p>
+
+<hr width="50%" />
+
+<h2 id="loadingFiles" name="loadingFiles">Loading files from the filesystem</h2>
+<h3>What's the problem?</h3>
+
+<p>By default, the wmlbrowser extension allows Mozilla/Firefox to load and
+display WML pages from a web server. But if you have a file on your local disk
+with a ".wml" extension, your browser doesn't know what to do with it.</p>
+
+<p>If you select this option, your browser will know that a .wml file contains
+WML content and will display it appropriately.</p>
+
+<h3>What's the recommended setting?</h3>
+<p>I recommend you leave this setting off unless you know that you need to
+load WML files from your file system.</p>
+
+</body>
+</html>
+<!-- vim: set encoding=utf-8: -->

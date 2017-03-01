@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE wml PUBLIC "-//WAPFORUM//DTD WML 1.1//EN" "http://www.wapforum.org/DTD/wml_1.1.xml">
+<wml>
+<card id= "login" title="Login">
+<onevent type="onenterforward"><refresh><setvar name="password" value=""/></refresh></onevent>
+<p>
+
+<b>Using either "login" method should display both entered values.</b><br/><br/>
+
+User Name:<br/><input title="login" name="login" maxlength="20"/><br/>
+Password:<br/><input title="password" name="password" maxlength="20" type="password"/><br/>
+
+<do type="accept" label="Log In">
+<go href="http://wmlbrowser.mozdev.org/tests/wml/form-submission-result.html" method="post"> 
+<postfield name="l" value="$login"/>
+<postfield name="p" value="$password"/>
+</go></do>
+
+<anchor title="Login">Login<go href="http://wmlbrowser.mozdev.org/tests/wml/form-submission-result.html?l=$(login:escape)&amp;p=$(password:escape)" method="get">
+</go></anchor><br/>
+
+</p></card></wml>

@@ -1,0 +1,7 @@
+<wml>
+	<card title="No DTD declaration">
+	<p>
+           Sample page usng &nbsp; without DTD declaration
+	</p>
+	</card> 
+</wml>

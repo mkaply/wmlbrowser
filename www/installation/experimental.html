@@ -1,0 +1,26 @@
+<script>
+<!--
+  function install (aEvent, hash)
+  {
+    var params = {
+        "wmlbrowser": {
+            URL: aEvent.target.href,
+            Hash: hash
+        }
+    };
+    InstallTrigger.install(params);
+    return false;
+  }
+//-->
+</script>
+
+<h2 class="page-header">wmlbrowser - experimental version</h2>
+
+<p>This is an <b>experimental</b> version of wmlbrowser which aims to support such constructs
+as 'onenterforward' and 'onenterbackwards' correctly. It's still under development, so use
+at your own risk.</p>
+
+<div id=installs>
+<div class=install id=first><p><a href="http://downloads.mozdev.org/wmlbrowser/wmlbrowser-0.8a1.xpi" onclick="return install(event, 'sha256:7d4bb23589c67445fe44b13efd82613145f9dcbc6114cf3faf758c875cfb37fa')"><span class=title>Install wmlbrowser 0.8a1</span></a><br> for Firefox 3.5</p></div>
+</div>
+<br style="clear: both">

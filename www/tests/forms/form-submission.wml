@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<wml>
+    <card title="Form submission test">
+        <p>This test demonstrates the use of text input
+        and password boxes, and the transmission of values
+        to a server.</p>
+        <p>Typing in the Password box should not display
+        the typed characters on the screen.</p>
+        <p>This also tests the syntax $variable and
+        $(variable:noesc).</p>
+        Username <input type="text" name="login"/>
+        <br/>
+        Password <input type="password" name="password"/>
+        <anchor>Test
+            <go href="http://wmlbrowser.mozdev.org/tests/wml/form-submission-result.html" >
+              <postfield name="ELogin" value="$login" />
+              <postfield name="EPassword1" value="$(password:noesc)" />
+            </go>
+        </anchor>
+    </card>
+</wml>

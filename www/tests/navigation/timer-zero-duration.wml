@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<wml>
+<card ontimer="timer-example-2.wml" title="Timer test page 1">
+<timer value="0 "/>
+<p>
+This timer, with a value of 0, should never expire, i.e. this page should not automatically be replaced
+</p>
+</card>
+</wml>

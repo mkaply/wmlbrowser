@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!DOCTYPE wml PUBLIC "-//WAPFORUM//DTD WML 1.1//EN"
+"http://www.wapforum.org/DTD/wml_1.1.xml">
+<wml><template><do type="prev" label="Back"><prev/></do></template>
+<card title="Bug 9049 test case">
+<onevent type="onenterforward"><refresh><setvar name="message"
+value=""/></refresh></onevent>
+<p><b>Post Message</b><br/><br/>
+
+<do type="accept" label="Send">
+<go href="http://wmlbrowser.mozdev.org/tests/wml/form-submission-result.html?action=reply&amp;mid=261204" method="get">
+<postfield name="message" value="$message"/>
+</go>
+</do>
+
+Subject: Rob<br/><br/>
+Message:<br/>
+<input title="Message" name="message" value="" format="*m"/><br/><br/>
+
+<anchor title="Send">Send
+<go href="http://wmlbrowser.mozdev.org/tests/wml/form-submission-result.html?action=reply&amp;mid=261204" method="get">
+<postfield name="message" value="$message"/>
+</go></anchor> /
+<anchor title="Cancel">Cancel<go href="http://wmlbrowser.mozdev.org/tests/wml/form-submission-result.html?ses=unknown&amp;cat=uk"
+method="get"></go></anchor>
+</p></card></wml>

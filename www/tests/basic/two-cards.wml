@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE wml PUBLIC "-//WAPFORUM//DTD WML 1.1//EN" "http://www.wapforum.org/DTD/wml_1.1.xml">
+<wml>
+
+  <card title="First card" id="card1">
+    <p>
+      <do type="accept">
+        <go href="#card2"/>
+      </do>
+      This is the first card...
+    </p>
+  </card>
+
+  <card id="card2" title="Second card">
+     <p>
+     This is the second card.
+     </p>
+  </card>
+
+</wml>
+

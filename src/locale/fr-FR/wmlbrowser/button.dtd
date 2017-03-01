@@ -1,0 +1,8 @@
+<!ENTITY wmlButtonLabelText "mode WML">
+<!ENTITY wmlButtonTooltipText "Indiquer ou non aux sites web que ce navigateur comprend le format WML ">
+<!ENTITY wmlOnLabelText "WML activé">
+<!ENTITY wmlOffLabelText "WML silencieux">
+<!ENTITY wmlOnTooltipText "Faire savoir aux sites que ce navigateur comprend le format WML">
+<!ENTITY wmlOffTooltipText "Ne pas faire savoir aux sites que ce navigateur comprend le format WML">
+
+<!-- vim: set encoding=utf-8: -->

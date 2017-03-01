@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE wml PUBLIC "-//WAPFORUM//DTD WML 1.1//EN"
+"http://www.wapforum.org/DTD/wml_1.1.xml">
+<wml>
+  <card title="Anchor/Go/Postfield test" id="body">
+    <anchor>
+      <go method="get" href="http://wmlbrowser.mozdev.org/tests/wml/form-submission-result.html">
+        <postfield name="param1" value="value1"/>
+        <postfield name="param2" value="value2"/>
+      </go>
+      Go
+    </anchor>
+  </card>
+</wml>
+

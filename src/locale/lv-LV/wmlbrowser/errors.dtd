@@ -1,0 +1,5 @@
+<!ENTITY errorTitle "wmlbrowser kļūda">
+<!ENTITY shortErrorText "wmlbrowser nespēja attēlot šo lapu.">
+<!ENTITY longErrorText "Lapa tika veiksmīgi lejupielādēta, bet wmlbrowser saskārās ar kļūdu, mēģinot to attēlot.">
+<!ENTITY showDetails "Rādīt kļūdas detaļas">
+<!ENTITY hideDetails "Paslēpt kļūdas detaļas">

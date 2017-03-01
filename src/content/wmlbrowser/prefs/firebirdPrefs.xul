@@ -1,0 +1,70 @@
+<?xml version="1.0"?> 
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?> 
+<?xml-stylesheet href="chrome://mozapps/skin/pref/pref.css"?>
+<?xml-stylesheet href="chrome://browser/skin/pref/pref.css"?>
+
+<!DOCTYPE dialog SYSTEM "chrome://wmlbrowser/locale/prefs.dtd" >
+
+<!-- Based on the main Firebird preference panel,
+     http://lxr.mozilla.org/mozilla/source/browser/components/prefwindow/content/pref.xul -->
+<dialog id="wmlbrowserPrefDialog" 
+        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+        title="&wmlbrowserOptions;" 
+        style="width: 52.3em; height: 43em;"
+        buttons="accept,cancel"
+        onload="Startup();" onunload="Shutdown();"
+        ondialogaccept="return hPrefWindow.onOK(event);"
+        ondialogcancel="return hPrefWindow.onCancel(event);"
+        persist="screenX screenY"> 
+
+  <script>
+  <![CDATA[
+
+  var hPrefWindow = null;
+
+  /** General startup routine for preferences dialog. 
+   *  Place all necessary modifications to pref tree here. 
+   **/
+  function Startup()
+  {
+    hPrefWindow = new nsPrefWindow("panelFrame");  
+    
+    if(!hPrefWindow)
+      throw "failed to create prefwindow";
+
+    hPrefWindow.init();
+  }
+
+  function Shutdown ()
+  {
+    document.persist("prefsDialog", "screenX screenY");
+  } 
+   
+  function visitLink(aEvent)
+  {
+    var node = aEvent.target;
+    while (node.nodeType != Node.ELEMENT_NODE)
+      node = node.parentNode;
+
+    var url = node.getAttribute("link");
+    if (url != "")
+        top.opener.top.opener.openNewWindowWith (url);
+  }
+
+  ]]>
+  </script>        
+        
+  <script type="application/x-javascript" src="chrome://global/content/nsWidgetStateManager.js"/>
+  <script type="application/x-javascript" src="chrome://browser/content/pref/nsPrefWindow.js"/>
+
+  <hbox flex="1">
+    <vbox flex="1">
+      <dialogheader id="header"/>
+      <iframe id="panelFrame" name="panelFrame" style="width: 0px" flex="1" src="chrome://wmlbrowser/content/prefs/browsingFirefox.xul"/>
+    </vbox>
+  </hbox>
+
+  <separator/>
+     
+</dialog>
+

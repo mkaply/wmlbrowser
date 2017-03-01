@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!DOCTYPE wml PUBLIC "-//WAPFORUM//DTD WML 1.1//EN" "http://www.wapforum.org/DTD/wml_1.1.xml">
+<wml>
+   <card>
+     <p>
+        Links with 'accesskey' tests<br/>
+        <a accesskey = "1" href="http://www.mozdev.org">Mozdev home page</a><br/>
+        <a accesskey = "2" href="http://wmlbrowser.mozdev.org">Wmlbrowser home page</a><br/>
+        <a accesskey = "3" href="http://www.mozilla.org">Mozilla home page</a><br/>
+     </p>
+   </card>
+</wml>

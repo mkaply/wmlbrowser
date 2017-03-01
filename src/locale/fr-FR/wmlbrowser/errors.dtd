@@ -1,0 +1,7 @@
+<!ENTITY errorTitle "Erreur de Wmlbrowser">
+<!ENTITY shortErrorText "Wmlbrowser n'a pas pu interpréter cette page.">
+<!ENTITY longErrorText "La page a été correctement téléchargée, mais wmlbrowser a rencontré une erreur lors de son interprétation.">
+<!ENTITY showDetails "Montrer les détails de l'erreur">
+<!ENTITY hideDetails "Cacher les détails de l'erreur">
+
+<!-- vim: set encoding=utf-8: -->

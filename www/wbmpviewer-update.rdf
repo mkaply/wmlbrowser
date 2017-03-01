@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:em="http://www.mozilla.org/2004/em-rdf#">
+
+  <Description about="urn:mozilla:extension:{5529a434-d9f6-11db-8314-0800200c9a66}"
+  em:signature="MIGTMA0GCSqGSIb3DQEBDQUAA4GBACmR4gipwu/586kcx9ewlXtCvkTqkdr2nJsHWDSnQdpkxIsOqy40B7PfYfsrCzIawJAvzdHH3R0aDJ27MMqvOE6jXkZ1UU3VREHvYEG56DOzlMpZlXNv/EMTAFdmVMdeys7c6y6mHaSEE+1bA2IEz5NY4wMEma1qHWgWhh9hOx6K">
+    <em:updates>
+      <Seq>
+          <li resource="urn:mozilla:extension:{5529a434-d9f6-11db-8314-0800200c9a66}:0.2.7"/>
+          <li resource="urn:mozilla:extension:{5529a434-d9f6-11db-8314-0800200c9a66}:1.1.0"/>
+      </Seq>
+    </em:updates>
+  </Description>
+
+  <Description about="urn:mozilla:extension:{5529a434-d9f6-11db-8314-0800200c9a66}:0.2.7">
+    <em:signature>MIGTMA0GCSqGSIb3DQEBDQUAA4GBAAhkprXjb1m4oMBlnlBU6I1j98dTyRyIqYuD9+0RNTunfw8xFarZ6PclpmwHV3JqHyY58z7N7GLWzFhKvCiTLcYTR9BuqEj9PHW5xjLDZiI8I/+iyTyTIqw3ziFOBaQWoPqcawl/EO6pxiZQM1G0rNCcQ+LiBMo7O3VyszohpR0d</em:signature>
+    <em:version>0.2.7</em:version>
+    <em:targetApplication>
+      <Description>
+        <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id> <!-- Firefox -->
+        <em:minVersion>3.0b5</em:minVersion>
+        <em:maxVersion>3.0.*</em:maxVersion>
+        <em:updateHash>sha256:f2087b6ebd311e7ea41259ed21ceb593d672ab3f20cb25a960b406c03f1d229c</em:updateHash>
+        <em:updateLink>http://downloads.mozdev.org/wmlbrowser/wbmpviewer-0.2.7.xpi</em:updateLink>
+      </Description>
+    </em:targetApplication>
+  </Description>  
+
+  <Description about="urn:mozilla:extension:{5529a434-d9f6-11db-8314-0800200c9a66}:1.1.0">
+    <em:signature>MIGTMA0GCSqGSIb3DQEBDQUAA4GBAK+vIkI3rvj0+1ALF99HdPgBM7CHi5T1FfXPNrFFmnV0xkcCXOKOrLd+6lyQ0l90stmSGE6JpQ3abghB7/YlvfzxV/d54DlIbKp9edgOSDW7J+yMu5S+UiiPeH9KcudwBLzy3qsMUrO8Xo6yqFJe4A1T4W0h5CXRALeNYvZ8ZSZy</em:signature>
+    <em:version>1.1.0</em:version>
+    <em:targetApplication>
+      <Description>
+        <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id> <!-- Firefox -->
+        <em:minVersion>3.5</em:minVersion>
+        <em:maxVersion>3.5.*</em:maxVersion>
+        <em:updateHash>sha256:1ae58ab2e1da0a7a811b9a1f69abb89630876fbaf99b05a05d930268ad8e11a4</em:updateHash>
+        <em:updateLink>http://downloads.mozdev.org/wmlbrowser/wbmpviewer-1.1.0.xpi</em:updateLink>
+      </Description>
+    </em:targetApplication>
+  </Description>  
+
+</RDF>

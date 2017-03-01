@@ -1,0 +1,25 @@
+<html>
+<head>
+<title>XPI install/SHA test</title>
+<script>
+<!--
+  function install (aEvent, hash)
+  {
+    var params = {
+        "wmlbrowser": {
+            URL: aEvent.target.href,
+            Hash: hash
+        }
+    };
+    InstallTrigger.install(params);
+    return false;
+  }
+//-->
+</script>
+<body>
+<noscript>Please enable Javascript</noscript>
+<div class=install id=first><p><a href="http://downloads.mozdev.org/wmlbrowser/wmlbrowser-0.7.25.xpi" onclick="return install(event, 'sha256:e52d9e020f2daceb197488b67fc2da01bf3d08778eda41a0a162722a3d48fe92')"><span class=title>Install from mirrors</span></a></p></div>
+<div class=install><p><a href="http://mirror.informatik.uni-mannheim.de/pub/mirrors/mozdev.org//wmlbrowser/wmlbrowser-0.7.25.xpi" onclick="return install(event, 'sha256:e52d9e020f2daceb197488b67fc2da01bf3d08778eda41a0a162722a3d48fe92')"><span class=title>Install from direct link</span></a></p></div>
+
+</body>
+</html>

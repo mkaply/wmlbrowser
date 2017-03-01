@@ -1,0 +1,17 @@
+﻿<!ENTITY help "Помощь">
+<!ENTITY helpURL "http://wmlbrowser.mozdev.org/help/ru-RU/options.html">
+<!ENTITY helpAccesskey "П">
+
+<!ENTITY httpAcceptLabel "Передача информации серверам">
+<!ENTITY httpAcceptCheckboxText "Сообщать серверу, что FireFox понимает WML">
+<!ENTITY httpAcceptCheckboxShortText "Сообщать серверу, что FireFox понимает WML">
+<!ENTITY httpAcceptAccesskey "а">
+<!ENTITY httpAcceptWarning "(This option is needed to make some sites work, but has been reported to break Hotmail.)">
+<!ENTITY httpAcceptButtonDescription "Используйте кнопку в панели инструментов для использования этой опции">
+<!ENTITY httpAcceptButtonLabel "Отображать кнопку в панеле инструментов">
+
+<!ENTITY loadWmlFilesLabel "Загрузка ">
+<!ENTITY loadWmlFilesAccesskey "З">
+<!ENTITY loadWmlFilesCheckboxTest "Загружать файл .wml с локального диска как страницу WML">
+
+<!-- vim: set encoding=utf-8 guifont=Courier_New: -->

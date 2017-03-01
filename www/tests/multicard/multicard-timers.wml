@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE wml PUBLIC "-//WAPFORUM//DTD WML 1.1//EN"
+"http://www.wapforum.org/DTD/wml_1.1.xml">
+<wml>
+<card title="Independent timers test">
+<p>This card tests independent timers for different cards.
+There is no timer associated with this first card.
+The timer starts when the user navigates to the second card.</p>
+<a href="#card2">Go to second card and start timer</a>
+</card>
+
+<card id="card2" title="Timer started">
+    <p>This page should redirect to wmlbrowser.mozdev.org after 4 seconds.</p>
+    <onevent type="ontimer">
+         <go href="http://wmlbrowser.mozdev.org"></go>
+    </onevent>
+    <timer value="40"/>
+</card>
+</wml>

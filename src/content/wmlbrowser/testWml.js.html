@@ -1,0 +1,224 @@
+<html>
+ <head>
+  <title>Test Page for wml.js</title>
+  <script language="javascript" type="text/javascript" src="./jsunit/app/jsUnitCore.js"></script>
+  <script language="javascript" type="text/javascript" src="./wml.js"></script>
+  <script language="javascript" type="text/javascript">
+      /**
+       * Test the unescaping function of nsWMLescape in various forms.
+       */
+      function testWMLescapeUnescaping () {
+          assertEquals ("#", nsWMLescape ("%23", ":unesc"));
+          assertEquals ("#", nsWMLescape ("%23", ":UnEsc"));
+          assertEquals ("#", nsWMLescape ("%23", ":UNESC"));
+          assertEquals ("#", nsWMLescape ("%23", ":u"));
+      }
+      /**
+       * Test the escaping function of nsWMLescape in various forms.
+       */
+      function testWMLescapeEscaping () {
+          assertEquals ("%23", nsWMLescape ("#", ":escape"));
+          assertEquals ("%23", nsWMLescape ("#", ":EsCapE"));
+          assertEquals ("%23", nsWMLescape ("#", ":ESCAPE"));
+          assertEquals ("%23", nsWMLescape ("#", ":e"));
+      }
+      /**
+       * Test the no-escaping function of nsWMLescape in various forms.
+       */
+      function testWMLescapeEscaping () {
+          assertEquals ("#", nsWMLescape ("#", ":noesc"));
+          assertEquals ("#", nsWMLescape ("#", ":NoEsc"));
+          assertEquals ("#", nsWMLescape ("#", ":NOESC"));
+          assertEquals ("#", nsWMLescape ("#", ":n"));
+      }
+      /**
+       * Test calling the function nsWMLgetValue for the form
+       * element with id "name".
+       */
+      function testWMLgetValueIdName() {
+          assertEquals ("nametest", nsWMLgetValue ("name","value","name"));
+      }
+      /**
+       * Test calling the function nsWMLreplaceValues for the form
+       * element with id "name". The syntax $(name) is tested.
+       */
+      function testWMLreplaceValuesIdNameWithBrackets() {
+          assertEquals ("nametest", nsWMLreplaceValues ("$(name)"));
+      }
+      /**
+       * Test calling the function nsWMLreplaceValues for the form
+       * element with id "name". The syntax $name is tested.
+       */
+      function testWMLreplaceValuesIdNameWithoutBrackets() {
+          assertEquals ("nametest", nsWMLreplaceValues ("$name"));
+      }
+      /**
+       * Test calling the function nsWMLreplaceValues for the form
+       * element with id "name". The syntax $(name:noesc) is tested.
+       */
+      function testWMLreplaceValuesIdNameWithNoescaping() {
+          // The values are escaped once for inclusion in a URL anyway.
+          assertEquals ("%2523", nsWMLreplaceValues ("$(escaped:noesc)"));
+      }
+      /**
+       * Test calling the function nsWMLreplaceValues for the form
+       * element with id "name". The syntax $(name:escape) is tested.
+       */
+      function testWMLreplaceValuesIdNameWithEscaping() {
+           // The values have already been escaped once. :escape
+           // escapes them a second time.
+           assertEquals ("%252523", nsWMLreplaceValues ("$(escaped:escape)"));
+      }
+      /**
+       * Test calling the function nsWMLreplaceValues for the form
+       * element with id "name". The syntax $(name:unesc) is tested.
+       */
+      function testWMLreplaceValuesIdNameWithUnescaping() {
+          // The values have already been escaped once. So an unescaped
+          // value will return the original
+          assertEquals ("%23", nsWMLreplaceValues ("$(escaped:unesc)"));
+      }
+      /**
+       * Test calling the function nsWMLreplaceValues with a mode of "href"
+       * and a fixed URL.
+       */
+      function testWMLreplaceValuesHref1() {
+         assertEquals ("http://wmlbrowser.mozdev.org/",
+         nsWMLreplaceValues ("http://wmlbrowser.mozdev.org/", "href"));
+      }
+      /**
+       * Test calling the function nsWMLreplaceValues with a mode of
+       * "href" and a URL containing an expression of the form $name.
+       */
+      function testWMLreplaceValuesHref2() {
+         assertEquals ("http://wmlbrowser.mozdev.org/tests/wml/nametest",
+         nsWMLreplaceValues ("http://wmlbrowser.mozdev.org/tests/wml/$(name)",
+                             "href"));
+      }
+      /**
+       * Test calling the function nsWMLreplaceValues with a mode of
+       * "href" and a URL containing an expression of the form $name as a
+       * GET parameter value.
+       */
+      function testWMLreplaceValuesHref3() {
+         assertEquals ("http://wmlbrowser.mozdev.org/tests/wml?test=nametest",
+         nsWMLreplaceValues ("http://wmlbrowser.mozdev.org/tests/wml?test=$(name)",
+                             "href"));
+      }
+      /**
+       * Test calling the function nsWMLreplaceValues with a mode of
+       * "href" and a URL containing an expression of the form $name as a
+       * GET parameter value, where the value contains at least one
+       * character requiring URL-escaping.
+       */
+      function testWMLreplaceValuesHref4() {
+         assertEquals ("http://wmlbrowser.mozdev.org/tests/wml?test=%25test%20%25",
+         nsWMLreplaceValues ("http://wmlbrowser.mozdev.org/tests/wml?test=$(inputwithspecialchars)",
+                             "href"));
+      }
+      /**
+       * Test calling the function nsWMLreplaceValues with a mode of
+       * "href" and a URL containing an expression of the form $name as a
+       * GET parameter value, where the value refers to a single-select
+       * field.
+       */
+       function testWMLreplaceValuesHrefSingleSelect() {
+          assertEquals ("http://wmlbrowser.mozdev.org/tests/wml?input=1",
+          nsWMLreplaceValues ("http://wmlbrowser.mozdev.org/tests/wml?input=$(singleselect)",
+                             "href"));
+      }
+      /**
+       * Test calling the function nsWMLreplaceValues with a mode of
+       * "href" and a URL containing an expression of the form $name as a
+       * GET parameter value, where the value refers to a multiple-select
+       * field.
+       */
+       function testWMLreplaceValuesHrefMultipleSelect() {
+          // Ordering isn't important here
+          assertEquals ("http://wmlbrowser.mozdev.org/tests/wml?input=1&input=2",
+          nsWMLreplaceValues ("http://wmlbrowser.mozdev.org/tests/wml?input=$(multipleselect)",
+                             "href"));
+      }
+      /**
+       * Test calling the function nsWMLreplaceValues with a mode of
+       * "href" and a URL containing an expression of the form $name as a
+       * GET parameter value, where the value refers to a single-select
+       * field and the value contains a URL-special character (a space).
+       */
+       function testWMLreplaceValuesHrefSingleSelectWithSpace() {
+          assertEquals ("http://wmlbrowser.mozdev.org/tests/wml?input=x%20y",
+          nsWMLreplaceValues ("http://wmlbrowser.mozdev.org/tests/wml?input=$(singleselectwithspace)",
+                             "href"));
+      }
+      /**
+       * Test calling the function nsWMLreplaceValues with a mode of
+       * "href" and a URL containing an expression of the form $name as a
+       * GET parameter value, where the value refers to a multiple-select
+       * field and the values contain URL-special characters.
+       */
+       function testWMLreplaceValuesHrefMultipleSelectWithSpecialCharacters() {
+          // Ordering, case aren't important here
+          assertEquals ("http://wmlbrowser.mozdev.org/tests/wml?input=%23&input=%25",
+          nsWMLreplaceValues ("http://wmlbrowser.mozdev.org/tests/wml?input=$(multipleselectwithspecialcharacters)",
+                             "href"));
+      }
+      /**
+       * Test that the double-dollar syntax $$name is replaced with $name.
+       */
+      function testWMLreplaceValuesDoubleDollar() {
+          assertEquals ("$name", nsWMLreplaceValues ("$$name", "href"));
+      }
+      /**
+       * Test the behaviour of a URL requiring multiple substitutions.
+       */
+      function testWMLreplaceValuesMultipleReplacementsWithEscaping() {
+          assertEquals
+          ("http://wmlbrowser.mozdev.org/tests/wml?l=123&p=456",
+          nsWMLreplaceValues ("http://wmlbrowser.mozdev.org/tests/wml?l=$(login:escape)&p=$(password:escape)"));
+      }
+  </script>
+ </head>
+ <body>
+     <h1>JSUnit Test functions for wml.js</h1>
+     <p>These tests can be run as follows:</p>
+     <ol>
+         <li>Check out the wmlbrowser source code.
+         <li>Download the <a href="http://www.edwardh.com/jsunit/">JSunit</a> code into
+         a jsunit/ subdirectory of src/content/wmlbrowser.
+         <li>Load the testRunner.html file from the jsunit subdirectory.
+         <li>Browse to this file, select it, and choose Run.
+     </ol>
+     <p>Use 'View Source' to see the tests.</p>
+     <hr>
+     <div id="forms">
+     <p>The following form is used to provide input to the tests.</p>
+     <form>
+         <input id="__wmlbrowser_name" value="nametest" disabled>
+         <input id="__wmlbrowser_escaped" value="%23" disabled>
+         <input id="__wmlbrowser_login" value="123" disabled>
+         <input id="__wmlbrowser_password" value="456" disabled>
+         <br>
+         <input id="__wmlbrowser_inputwithspecialchars" value="%test %" disabled>
+         <br>
+         <select id="__wmlbrowser_singleselect" disabled>
+             <option selected label="1" value="1">1</option>
+         </select>
+         <br>
+         <select id="__wmlbrowser_multipleselect" multiple disabled>
+             <option selected label="1" value="1">1</option>
+             <option selected label="2" value="2">2</option>
+         </select>
+         <br>
+         <select id="__wmlbrowser_singleselectwithspace" disabled>
+             <option selected label="1" value="x y">x y</option>
+         </select>
+         <br>
+         <select id="__wmlbrowser_multipleselectwithspecialcharacters" multiple disabled>
+             <option selected label="1" value="#">~</option>
+             <option selected label="2" value="%">%</option>
+         </select>
+         <br>
+     </form>
+     </div>
+ </body>
+</html>

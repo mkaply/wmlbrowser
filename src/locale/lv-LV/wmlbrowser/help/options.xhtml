@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Wmlbrowser uzstādījumi</title>
+  <link rel="stylesheet" type="text/css" href="chrome://help/skin/helpFileLayout.css"/>
+  <style type="text/css"> .contentsBox { width: 90%; } </style>
+</head>
+<body>
+<h1>Wmlbrowser uzstādījumi</h1>
+
+<div class="contentsBox">Šajā sadaļā:
+  <ul>
+    <li><a href="#httpAccept">Vai pārlūkam jāsaka mājaslapām, kad tas saprot WML</a></li>
+    <li><a href="#loadingFiles">Failu atvēršana no Tava datora</a></li>
+  </ul>
+</div>
+
+<p>Šeit ir uzstādījumi, kurus Tu vari uzstādīt iekš wmlbrowser 0.7 versijā</p>
+
+<h2 id="httpAccept" name="httpAccept">Vai pārlūkam jāsaka mājaslapām, kad tas saprot WML</h2>
+<h3>Ko tas nozīmē?</h3>
+<p>Jebkad kad Tu sūti pieprasījumu pēc lapas serverim, Tavs pārlūks nosūta 
+tā saukto Accept header, kas pasaka kādu lapas saturu tas saprot.</p>
+<p>Ja tu uzstādi šo funkciju, tad Tavs pārlūks teiks serverim, kad tas spēj attēlot WML.</p>
+<p>Šajā gadījuma serveris var atsūtīt pavisam citu lapu.</p>
+
+<h3>Kāds uzstādījums būtu ieteicams?</h3>
+<p>Labākais noklusējuma uzstādījums ir izslēgts. Ieslēdzot to var nozīmēt, kad Tu 
+saņem citas lapas, nevis tās kuras gaidīji un šī funkcija nestrādā iekš Hotmail.</p>
+<p>Firefox lietotāji var arī nomainīt šo uzstādījumu pievienojot "WML režīms" pogu savā rīku joslā 
+(Labais klikšķis uz rīku joslas un izvēlies "Customise", tad ievelc WML pogu (mobilā telefona ikonu) 
+savā rīku joslā)</p>
+<p>SeaMonkey lietotāji var ieslēgt šo pogu iekš "wmlbrowser" sadaļas uzstādījumu logā.</p>
+
+<hr width="50%" />
+
+<h2 id="loadingFiles" name="loadingFiles">Failu atvēršana no Tava datora</h2>
+<h3>Kur ir problēma?</h3>
+
+<p>Pēc noklusējuma wmlbrowser paplašinājums atļauj Mozilla/Firefox ielādēt un 
+attēlot WML lapas no tīmekļa servera. Bet ja Tev ir faili uz Taviem vietējiem atmiņas avotiem 
+ar ".wml", Tavs pārlūks nezin ko darīt ar to.</p>
+
+<p>Ja Tu ieslēgsi šo uzstādījumu, Tavs pārlūks atpazīs .wml faila saturu 
+kā WML un attēlos tos pareizi pārlūkā.</p>
+
+<h3>Kāds uzstādījums būtu ieteicams?</h3>
+<p>Es iesaku to atslēgt, ja vienīgi Tev nevajag attēlot WML failus no datora.</p>
+
+</body>
+</html>
+<!-- vim: set encoding=utf-8: -->

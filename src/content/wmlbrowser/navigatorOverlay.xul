@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://wmlbrowser/skin/navigator.css" type="text/css"?>
+<!DOCTYPE overlay SYSTEM "chrome://wmlbrowser/locale/button.dtd" >
+<overlay id="wmlbrowserNavigatorOverlay"
+        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+  <script type="application/x-javascript" src="chrome://wmlbrowser/content/setContentTypePreference.js" />
+  <script type="application/x-javascript" src="chrome://wmlbrowser/content/extensionStatusObserver.js" />
+
+  <toolbar id="PersonalToolbar">
+    <toolbaritem id="wmlbrowser_mozdev_org_toggle_contenttype"
+                 insertbefore="home-bm-separator,bookmarks-button,personal-bookmarks">
+      <toolbarbutton
+        id="wmlbrowser_mozdev_org_toggle_contenttype-button"
+        class="toolbarbutton-1 chromeclass-toolbar-additional"
+        type="menu-button"
+        label="&wmlButtonLabelText;"
+        tooltiptext="&wmlButtonTooltipText;"
+        hidden="true"
+        state="enabled">
+             <menupopup>
+                  <menuitem
+                      id="wmlbrowser_mozdev_org_content_on"
+                      name="wmlbrowser_mozdev_org_content"
+                      label="&wmlOnLabelText;"
+                      tooltiptext="&wmlOnTooltipText;"
+                      type="radio"
+                      oncommand="_wmlbrowser_setPreference (true)"/>
+                  <menuitem
+                      id="wmlbrowser_mozdev_org_content_off"
+                      name="wmlbrowser_mozdev_org_content"
+                      label="&wmlOffLabelText;"
+                      tooltiptext="&wmlOffTooltipText;"
+                      type="radio"
+                      oncommand="_wmlbrowser_setPreference (false)"/>
+              </menupopup>
+      </toolbarbutton>
+    </toolbaritem>
+  </toolbar>
+
+  <script type="application/x-javascript">
+      window.addEventListener("load", function() { _wmlbrowser_initialise(); }, false); 
+  </script>
+
+</overlay> 

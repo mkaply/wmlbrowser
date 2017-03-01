@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE wml PUBLIC "-//WAPFORUM//DTD WML 1.2//EN"
+"http://www.wapforum.org/DTD/wml12.dtd">
+<wml>
+ <card id="decoding" title="URL decoding test">
+  <onevent type="ontimer">
+   <go href="http://wmlbrowser.mozdev.org/tests/wml/form-submission-result.html?first=123&amp;second=456"/>
+  </onevent>
+  <timer value="50"/>
+  <p align="center">
+   After 5 seconds you will be redirected to a page listing a set of variables. These should be: first=123, second=456.
+  </p>
+ </card>
+</wml>

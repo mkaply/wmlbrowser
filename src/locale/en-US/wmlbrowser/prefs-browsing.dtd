@@ -1,0 +1,15 @@
+<!ENTITY help "Help">
+<!ENTITY helpURL "http://wmlbrowser.mozdev.org/help/options.html">
+<!ENTITY helpAccesskey "H">
+
+<!ENTITY httpAcceptLabel "Sending information to web servers">
+<!ENTITY httpAcceptCheckboxText "Tell web sites that the browser understands WML content">
+<!ENTITY httpAcceptCheckboxShortText "Tell web sites about WML support">
+<!ENTITY httpAcceptAccesskey "T">
+<!ENTITY httpAcceptWarning "(This option is needed to make some sites work, but has been reported to break Hotmail.)">
+<!ENTITY httpAcceptButtonDescription "You can also enable a toolbar button to control this functionality.">
+<!ENTITY httpAcceptButtonLabel "Show toolbar button">
+
+<!ENTITY loadWmlFilesLabel "Loading files from the filesystem">
+<!ENTITY loadWmlFilesAccesskey "L">
+<!ENTITY loadWmlFilesCheckboxTest "Load .wml files from the filesystem as WML">

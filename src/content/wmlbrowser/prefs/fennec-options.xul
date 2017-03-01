@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE vbox SYSTEM "chrome://wmlbrowser/locale/prefs-browsing.dtd">
+
+<vbox xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+  <setting pref="extensions.wmlbrowser.loadfiles" type="boolint" on="1" off="2" title="&httpAcceptCheckboxShortText;" onchange="try { wmlbrowserExtension.onHttpPrefChanged(this.value); } catch (e) { window.alert(e); }"/>
+  <setting id="wmlbrowserHttpAcceptDefault" pref="network.http.accept.default" type="string" title="Internal use only" disabled="true"/>
+
+</vbox>

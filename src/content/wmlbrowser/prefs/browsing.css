@@ -1,0 +1,14 @@
+@namespace html url(http://www.w3.org/1999/xhtml);
+
+html|a {
+  margin-left: 5px;                                                             
+  text-decoration: underline;                                                   
+  color: blue;                                                                  
+  cursor: pointer;                                                              
+}                                                                               
+
+html|a:active {                                                            
+  color: red;                                                                   
+}
+
+.sitelink { text-align: right; }

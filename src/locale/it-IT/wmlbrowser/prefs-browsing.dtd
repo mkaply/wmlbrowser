@@ -1,0 +1,17 @@
+<!ENTITY help "Help">
+<!ENTITY helpURL "http://wmlbrowser.mozdev.org/help/it-IT/options.html">
+<!ENTITY helpAccesskey "H">
+
+<!ENTITY httpAcceptLabel "Inviare informazioni ai web server">
+<!ENTITY httpAcceptCheckboxText "Dire ai siti web che il browser comprende il contenuto WML">
+<!ENTITY httpAcceptCheckboxShortText "Dire ai siti web che il browser comprende il contenuto WML">
+<!ENTITY httpAcceptAccesskey "D">
+<!ENTITY httpAcceptWarning "(Questa opzione è richiesta per far funzionare alcuni siti, ma è stato riportato che non fa funzionare Hotmail.)">
+<!ENTITY httpAcceptButtonDescription "Permetti ad un pulsante della toolbar di controllare questa funzione.">
+<!ENTITY httpAcceptButtonLabel "Visualizza il pulsante della toolbar">
+
+<!ENTITY loadWmlFilesLabel "Caricamento file in locale">
+<!ENTITY loadWmlFilesAccesskey "C">
+<!ENTITY loadWmlFilesCheckboxTest "Carica i file .wml locali come WML">
+
+<!-- vim: set encoding=utf-8: -->

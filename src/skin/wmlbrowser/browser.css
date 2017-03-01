@@ -1,0 +1,73 @@
+#wmlbrowser_mozdev_org_toggle_contenttype { 
+  list-style-image: url("chrome://wmlbrowser/skin/wmlstate.png"); 
+  -moz-image-region: rect(0px 24px 24px 0px);  
+}
+
+#wmlbrowser_mozdev_org_toggle_contenttype.on {
+  -moz-image-region: rect(0px 48px 24px 24px);  
+}
+
+#wmlbrowser_mozdev_org_toggle_contenttype.off {
+  -moz-image-region: rect(0px 72px 24px 48px);  
+}
+
+#wmlbrowser_mozdev_org_toggle_contenttype:hover {
+  -moz-image-region: rect(24px 24px 48px 0px);
+}
+
+#wmlbrowser_mozdev_org_toggle_contenttype.on:hover {
+  -moz-image-region: rect(24px 48px 48px 24px);
+}
+
+#wmlbrowser_mozdev_org_toggle_contenttype.off:hover {
+  -moz-image-region: rect(24px 72px 48px 48px);
+}
+
+#wmlbrowser_mozdev_org_toggle_contenttype[disabled="true"] { 
+  -moz-image-region: rect(48px 24px 72px 0px);
+}
+
+#wmlbrowser_mozdev_org_toggle_contenttype.on[disabled="true"] { 
+  -moz-image-region: rect(48px 48px 72px 24px);
+}
+
+#wmlbrowser_mozdev_org_toggle_contenttype.off[disabled="true"] { 
+  -moz-image-region: rect(48px 72px 72px 48px);
+}
+
+toolbar[iconsize="small"] #wmlbrowser_mozdev_org_toggle_contenttype { 
+  list-style-image: url("chrome://wmlbrowser/skin/wmlstate-small.png"); 
+  -moz-image-region: rect(0px 16px 16px 0px);  
+}
+
+toolbar[iconsize="small"] #wmlbrowser_mozdev_org_toggle_contenttype.on {
+  -moz-image-region: rect(0px 32px 16px 16px);  
+}
+
+toolbar[iconsize="small"] #wmlbrowser_mozdev_org_toggle_contenttype.off {
+  -moz-image-region: rect(0px 48px 16px 32px);  
+}
+
+toolbar[iconsize="small"] #wmlbrowser_mozdev_org_toggle_contenttype:hover {
+  -moz-image-region: rect(16px 16px 32px 0px);
+}
+
+toolbar[iconsize="small"] #wmlbrowser_mozdev_org_toggle_contenttype.on:hover {
+  -moz-image-region: rect(16px 32px 32px 16px);
+}
+
+toolbar[iconsize="small"] #wmlbrowser_mozdev_org_toggle_contenttype.off:hover {
+  -moz-image-region: rect(16px 48px 32px 32px);
+}
+
+toolbar[iconsize="small"] #wmlbrowser_mozdev_org_toggle_contenttype[disabled="true"] { 
+  -moz-image-region: rect(32px 16px 48px 0px);
+}
+
+toolbar[iconsize="small"] #wmlbrowser_mozdev_org_toggle_contenttype.on[disabled="true"] { 
+  -moz-image-region: rect(32px 32px 48px 16px);
+}
+
+toolbar[iconsize="small"] #wmlbrowser_mozdev_org_toggle_contenttype.off[disabled="true"] { 
+  -moz-image-region: rect(32px 48px 48px 32px);
+}

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE wml PUBLIC "-//WAPFORUM//DTD WML 1.1//EN"
+"http://www.wapforum.org/DTD/wml_1.1.xml">
+<wml>
+<card id="UserAgent" title="User Agent">
+<p align="left">
+  <strong>ucp morgen</strong><br/>
+  <strong>user agent form</strong><br/>
+  device name:<br/>
+    <input name="device" size="15"/><br/>
+    <do type="accept" label="weiter" name="weiter">
+    <go href="uastore.jsp" method="post">
+      <postfield name="device" value="$device" />
+    </go>
+  </do>
+
+<br/>
+</p>
+</card>
+</wml> 

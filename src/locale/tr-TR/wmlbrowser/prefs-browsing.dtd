@@ -1,0 +1,17 @@
+<!ENTITY help "Yardım">
+<!ENTITY helpURL "http://wmlbrowser.mozdev.org/help/tr-TR/options.html">
+<!ENTITY helpAccesskey "Y">
+
+<!ENTITY httpAcceptLabel "Web sunucularına bilgi gönderimi">
+<!ENTITY httpAcceptCheckboxText "Web sunucularına bu tarayıcının WML içeriği anladığını bildirmek">
+<!ENTITY httpAcceptCheckboxShortText "Web sunucularına bu tarayıcının WML içeriği anladığını bildirmek">
+<!ENTITY httpAcceptAccesskey "W">
+<!ENTITY httpAcceptWarning "(Bu şık bazı web siteleri için gereklidir, fakat Hotmail ile sorun çıktığı bilinmelidir.)">
+<!ENTITY httpAcceptButtonDescription "Bu seçeneği daha kolay kullanmak için araç çubuğuna bir düğme ekleyebilirsiniz.">
+<!ENTITY httpAcceptButtonLabel "Düğmeyi araç çubuğunda göster">
+
+<!ENTITY loadWmlFilesLabel "Dosyaları dosya sisteminizden (sabit disk, disket, CD vb.) yüklemek">
+<!ENTITY loadWmlFilesAccesskey "D">
+<!ENTITY loadWmlFilesCheckboxTest ".wml dosyalarını dosya sisteminizden WML içeriği olarak yükleyip açmak.">
+
+<!-- vim: set encoding=utf-8 guifont=Courier_New: -->

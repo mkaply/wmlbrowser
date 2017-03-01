@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<!DOCTYPE wml PUBLIC "-//WAPFORUM//DTD WML 1.2//EN" "http://www.wapforum.org/DTD/wml12.dtd">
+<wml><card id="sm_pr" title="Polyphonic Ringtones">
+<p mode="nowrap">
+	<a href="toplist.php?k=pr&amp;c=ten" accesskey="1">Top 10</a><br/>
+	<a href="topcats.php?k=pr" accesskey="2">Top 10 by Category</a><br/>
+	<a href="cats.php?k=pr" accesskey="3">Browse the Catalog</a><br/>
+	<a href="free.php?k=pr" accesskey="4">Free Ring Tones</a><br/>
+	<a href="http://wap.zingy.com/nmatrix/sm.php?k=pr" accesskey="5">Matrix Ring Tones</a><br/>
+	<anchor accesskey="6">Search<go href="#srch" method="get">
+			<setvar name="k" value="pr"/>
+		</go>
+	</anchor><br/>
+	<a href="pend.php?k=pr" accesskey="7">Pending Downloads</a><br/>
+	<a href="#help" accesskey="8">Help</a><br/>
+	&nbsp;<br/>
+</p>
+</card>
+<card id="srch" title="Search"><p mode="nowrap">	<a href="#srcht" accesskey="1">By title</a><br/>
+	<a href="#srcha" accesskey="2">By artist</a><br/>
+	<a href="#srchc" accesskey="3">By download code</a><br/>	&nbsp;<br /><anchor>Back<prev/></anchor><br/>
+<a href="sm.php?k=pr">Home</a></p></card>
+<card id="srcht" title="Search"><p>Title:<br />	<input name="v" size="15"/><br/>	<anchor>Submit<go href="srch.php?k=pr" method="get">			<postfield name="k" value="$k" />			<postfield name="m" value="title" />			<postfield name="v" value="$v" />		</go>	</anchor><br />
+	&nbsp;<br /><anchor>Back<prev/></anchor><br/>
+<a href="sm.php?k=pr">Home</a></p></card>
+<card id="srcha" title="Search"><p>Artist:<br />	<input name="v" size="15"/><br/>	<anchor>Submit<go href="srch.php?k=pr" method="get">			<postfield name="k" value="pr" />			<postfield name="m" value="author" />			<postfield name="v" value="$v" />		</go>	</anchor><br />
+	&nbsp;<br /><anchor>Back<prev/></anchor><br/>
+<a href="sm.php?k=pr">Home</a></p></card><card id="srchc" title="Search">
+<p>Download Code:<br />
+	<input name="v" size="15" format="*N"/><br/>
+	<anchor>Submit<go href="srch.php?k=pr" method="get">
+			<postfield name="k" value="$k" />
+			<postfield name="m" value="itemID" />
+			<postfield name="v" value="$v" />
+		</go>
+	</anchor><br />
+	&nbsp;<br />
+<anchor>Back<prev/></anchor><br/>
+<a href="sm.php?k=pr">Home</a></p>
+</card>
+<card id="help" title="Help">
+<p>Help</p>	<p>For customer support visit http://www.zingy.com/nextel or e-mail websupport@zingy.com<br/>Use of any licensed Digital Items is subject to terms and conditions available at www.Nextel.com<br />
+</p>
+<p mode="nowrap"><a href="faq.php">Frequently Asked Questions</a></p>
+<p><anchor>Back<prev/></anchor></p>
+</card></wml>

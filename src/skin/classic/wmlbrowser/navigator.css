@@ -1,0 +1,59 @@
+toolbaritem#wmlbrowser_mozdev_org_toggle_contenttype.on #wmlbrowser_mozdev_org_toggle_contenttype-button {
+  list-style-image: url("chrome://wmlbrowser/skin/wmlstate-small.png");
+  -moz-image-region: rect(0px 32px 16px 16px);  
+}
+
+toolbaritem#wmlbrowser_mozdev_org_toggle_contenttype.off #wmlbrowser_mozdev_org_toggle_contenttype-button {
+  list-style-image: url("chrome://wmlbrowser/skin/wmlstate-small.png");
+  -moz-image-region: rect(0px 48px 16px 32px);
+}
+
+toolbaritem#wmlbrowser_mozdev_org_toggle_contenttype #wmlbrowser_mozdev_org_toggle_contenttype-button {
+  list-style-image: url("chrome://wmlbrowser/skin/wmlstate-small.png");
+  -moz-image-region: rect(0px 16px 16px 0px);  
+}
+
+toolbaritem#wmlbrowser_mozdev_org_toggle_contenttype .toolbarbutton-text {
+  display: none;
+}
+
+toolbaritem#wmlbrowser_mozdev_org_toggle_contenttype .toolbarbutton-menubutton-button {
+  padding: 0px !important;
+}
+
+toolbaritem#wmlbrowser_mozdev_org_toggle_contenttype,
+toolbaritem#wmlbrowser_mozdev_org_toggle_contenttype .toolbarbutton-menubutton-button,
+toolbarbutton#wmlbrowser_mozdev_org_toggle_contenttype-button {
+  min-width: 0px !important;
+}
+
+/* SeaMonkey Modern */
+toolbar #wmlbrowser_mozdev_org_toggle_contenttype-button,
+toolbaritem#wmlbrowser_mozdev_org_toggle_contenttype .toolbarbutton-menubutton-stack {
+  display: -moz-box;
+  -moz-box-orient: horizontal;
+}
+
+toolbar #wmlbrowser_mozdev_org_toggle_contenttype-button[hidden="true"] {
+    display: none;
+}
+
+toolbar #wmlbrowser_mozdev_org_toggle_contenttype-button .toolbarbutton-menubutton-button {
+  -moz-box-orient: vertical;
+}
+
+toolbar #wmlbrowser_mozdev_org_toggle_contenttype-button,
+toolbar #wmlbrowser_mozdev_org_toggle_contenttype-button .toolbarbutton-menubutton-button,
+toolbar #wmlbrowser_mozdev_org_toggle_contenttype-button .toolbarbutton-menubutton-dropmarker {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  border-width: 0;
+}
+
+toolbar #wmlbrowser_mozdev_org_toggle_contenttype-button .toolbarbutton-menubutton-dropmarker,
+toolbaritem#wmlbrowser_mozdev_org_toggle_contenttype .toolbarbutton-menubutton-stack .toolbarbutton-menubutton-dropmarker {
+  margin: 0 !important;
+  padding: 0 1px 0 1px !important;
+}

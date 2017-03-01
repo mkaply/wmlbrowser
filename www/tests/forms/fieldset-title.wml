@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE wml PUBLIC "-//WAPFORUM//DTD WML 1.1//EN"
+"http://www.wapforum.org/DTD/wml_1.1.xml">
+
+<wml>
+<card title="Fieldset test"> 
+<p>This is a test of the title set on a fieldset element.
+In this case, the title is "fieldset title".
+ <fieldset title="Fieldset title">
+  Input: <input name="sample" type="text"/>
+ </fieldset>
+</p>
+</card>
+</wml>

@@ -1,0 +1,6 @@
+﻿<!ENTITY wmlButtonLabelText "Режим WML">
+<!ENTITY wmlButtonTooltipText "Настройка передачи информации серверам того, что браузер понимает WML">
+<!ENTITY wmlOnLabelText "WML включён">
+<!ENTITY wmlOffLabelText "WML выключен">
+<!ENTITY wmlOnTooltipText "Сообщать серверам информацию, что браузер понимает WML">
+<!ENTITY wmlOffTooltipText "Сообщать серверам информацию, что браузер не понимает WML">

@@ -1,0 +1,56 @@
+<h2>What's the problem?</h2>
+
+<p>Whenever you send a request for a page to the web, your browser sends
+something called an Accept header, which says what kinds of content the browser
+understands.</p>
+
+<p>Here's an example:</p>
+
+<pre>Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,video/x-mng,image/png,image/jpeg,image/gif;q=0.2,*/*;q=0.1</pre>
+
+<p>The "q" numbers are a measure of how much the browser prefers that kind of
+content. So for example we would prefer to see "text/html" - i.e. HTML - with
+q=0.9 to "text/plain" - i.e. plain text - with q=0.8.</pre>
+
+<p>The web server is then capable of giving different information back to the
+user depending on which types of content are listed in this header.</p>
+
+<p>The problem is that the default list which Mozilla/Firebird sends does not
+include the content type for WML content, text/vnd.wap.wml. This means that
+some servers may choose to send non-WML content where WML content would be
+available.</p>
+
+<h2>Why isn't this just fixed in the wmlbrowser software?</h2>
+
+<p>It may be, in a future release. But Mozilla/Firebird do not currently
+provide a "correct" way for extensions to add to the entries in the Accept
+header. There are ways to do it, but they have disadvantages of their own.</p>
+
+<h2>How can I fix it?</h2>
+
+<p>Here are two ways you can change this setting.</p>
+
+<h3>via about:config</h3>
+
+<p>In your Mozilla/Firebird browser, open the location "about:config". This
+will bring up a list of all the preference values known to the system. Find the option "network.http.accept.default".</p>
+
+<img src="screenshots/aboutconfig.png" width=679 height=502 alt="about:config screenshot">
+
+<p>Right-click on this value and select "Modify". Then add the text
+"text/vnd.wap.wml;q=0.4," in the string, after one of the commas.</p>
+
+<p>For example, on my system the original value is</p>
+
+<pre>text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,video/x-mng,image/png,image/jpeg,image/gif;q=0.2,*/*;q=0.1</pre>
+
+<p>and I changed it to</p>
+
+<pre>text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,<b>text/vnd.wap.wml;q=0.4</b>,video/x-mng,image/png,image/jpeg,image/gif;q=0.2,*/*;q=0.1</pre>
+
+<p>If you get problems or you want to change this behaviour back, just
+right-click on the value and select "Reset".</p>
+
+<h3>via user.js</h3>
+
+<p>Alternatively if you prefer playing around with text files, you can add the equivalent line to your user.js file. <a href="http://texturizer.net/firebird/edit.html">The Firebird help site describes how to do this.</a></p>

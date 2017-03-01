@@ -1,0 +1,6 @@
+<!ENTITY wmlButtonLabelText "WML mode">
+<!ENTITY wmlButtonTooltipText "Toggle whether the browser tells web sites that it understands WML">
+<!ENTITY wmlOnLabelText "WML on">
+<!ENTITY wmlOffLabelText "WML off">
+<!ENTITY wmlOnTooltipText "Tell web sites that the browser understands WML">
+<!ENTITY wmlOffTooltipText "Tell web sites that the browser does not understand WML">

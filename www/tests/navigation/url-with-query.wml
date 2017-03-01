@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE wml PUBLIC "-//WAPFORUM//DTD WML 1.1//EN" "http://www.wapforum.org/DTD/wml_1.1.xml">
+<wml>
+<card title="DO-GO test">
+    <p>This should submit a form with the values foo=123, bar=456.</p>
+    <do label="Go" type="go">
+      <go href="http://wmlbrowser.mozdev.org/tests/wml/form-submission-result.html?foo=123" method="get">
+        <postfield name="bar" value="456" />
+      </go>
+    </do>
+</card>
+</wml>
+
+

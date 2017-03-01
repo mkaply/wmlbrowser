@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE wml PUBLIC "-//WAPFORUM//DTD WML 1.1//EN"
+"http://www.wapforum.org/DTD/wml_1.1.xml">
+
+<wml>
+        <head>
+             <access domain="test.example.com" path="test.example.com" />
+             <meta http-equiv="cache-control" content="no-cache"/>
+        </head>
+        <card title="test card">
+            <onevent type="ontimer">
+                <p>Not allowed here</p>
+            </onevent>
+        </card>
+</wml>

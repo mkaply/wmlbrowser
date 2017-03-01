@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!-- vim: set encoding=utf-8: -->
+<RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:em="http://www.mozilla.org/2004/em-rdf#">
+  <Description about="urn:mozilla:install-manifest">
+    <em:name>wbmpviewer</em:name>
+    <em:version>1.2.0</em:version>
+    <em:description>Display WBMP images.</em:description>
+    <em:creator>Matthew Wilson</em:creator>
+    <em:contributor>Arunan Balasubramaniam</em:contributor>
+    <em:id>{5529a434-d9f6-11db-8314-0800200c9a66}</em:id>
+    <em:homepageURL>http://wmlbrowser.mozdev.org</em:homepageURL>
+    <em:updateURL>http://wmlbrowser.mozdev.org/wbmpviewer-update.rdf</em:updateURL>
+    <em:updateKey>MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCzP38134cT5ixg+XHqM19ASjsbnoe1l5V0Bs5l8Yzu/rv/X5wWppbNTH/EPQlol4BZ8RH+nW1WCJii3ZR4htG//trgezb9WOwoXQVDxeVwDhQdjXUqDMgKs5UZFdohW8XKBpsIY12tB8WZieOjaal9YL5ygvk+BUuc0xIedXR8DQIDAQAB</em:updateKey>
+    <!-- Firefox -->
+    <em:targetApplication>
+      <Description>
+        <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
+        <em:minVersion>4.0b3pre</em:minVersion>
+        <em:maxVersion>4.0b4</em:maxVersion>
+      </Description>
+    </em:targetApplication>
+  </Description>      
+</RDF>
+<!-- vim: set encoding=utf-8: -->

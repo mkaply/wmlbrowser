@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE wml PUBLIC "-//WAPFORUM//DTD WML 1.1//EN"
+"http://www.wapforum.org/DTD/wml_1.1.xml">
+<wml>
+<card title="Test of submitting a postfield named 'i'">
+<p>
+<anchor>Ok<go href="http://wmlbrowser.mozdev.org/tests/wml/form-submission-result.html">
+<postfield name="m" value="post"/>
+<postfield name="i" value="0"/>
+<postfield name="l" value="0"/>
+</go>
+</anchor>
+</p>
+</card>
+</wml>

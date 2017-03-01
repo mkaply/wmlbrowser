@@ -1,0 +1,17 @@
+<!ENTITY help "Pomocník">
+<!ENTITY helpURL "http://wmlbrowser.mozdev.org/help/sk/options.html">
+<!ENTITY helpAccesskey "P">
+
+<!ENTITY httpAcceptLabel "Odosielanie informácií webovým serverom">
+<!ENTITY httpAcceptCheckboxText "Oznámiť webovým stránkam, že prehliadač rozumie obsahu WML">
+<!ENTITY httpAcceptCheckboxShortText "Oznámiť webovým stránkam, že prehliadač rozumie obsahu WML">
+<!ENTITY httpAcceptAccesskey "O">
+<!ENTITY httpAcceptWarning "(Táto možnosť je pre niektoré stránky potrebná, ale údajne je v konflikte so službou Hotmail.)">
+<!ENTITY httpAcceptButtonDescription "Na ovládanie tejto funkcie je možné použiť aj tlačidlo na paneli s nástrojmi.">
+<!ENTITY httpAcceptButtonLabel "Zobraziť tlačidlo na paneli s nástrojmi">
+
+<!ENTITY loadWmlFilesLabel "Načítanie súborov WML zo systému súborov">
+<!ENTITY loadWmlFilesAccesskey "N">
+<!ENTITY loadWmlFilesCheckboxTest "Načítať súbory .wml zo systému súborov ako WML">
+
+<!-- vim: set encoding=utf-8 guifont=Courier_New: -->

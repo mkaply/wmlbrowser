@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<wml>
+    <card title="Not well formed test">
+        <p>This file is not well-formed because the p element is not closed.
+    </card>
+</wml>

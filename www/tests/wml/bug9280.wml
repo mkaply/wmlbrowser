@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE wml PUBLIC "-//WAPFORUM//DTD WML 1.1//EN"
+"http://www.wapforum.org/DTD/wml_1.1.xml">
+<wml>
+<card title="Form submission test">
+
+<input type="text" name="amount"/>
+<input type="text" name="bet"/>
+
+<anchor>Test
+        <go href="http://wmlbrowser.mozdev.org/tests/wml/form-submission-result.html" method="get">
+          <postfield name="op" value="results" />
+          <postfield  name="amount" value="$(amount)"/>
+          <postfield  name="bet" value="$(bet)"/>
+        </go> 
+</anchor>
+</card>
+</wml>

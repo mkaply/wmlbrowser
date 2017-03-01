@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE wml PUBLIC "-//WAPFORUM//DTD WML 1.1//EN" "http://www.wapforum.org/DTD/wml_1.1.xml">
+<wml>
+<head>
+<meta forua="true" http-equiv="Cache-Control" content="max-age=0"/>
+</head>
+<card id="card" title="输入密码">
+<p align="left">
+用户手机号：
+<input name="username" maxlength="127" emptyok="true" /><br/>
+UA：
+<input name="ua" maxlength="127" emptyok="true"/><br/>
+需要访问的网址
+<input name="url" maxlength="127" emptyok="true"/><br/>
+<anchor>
+<go href="http://wmlbrowser.mozdev.org/tests/wml/form-submission-result.html">
+<postfield name="username" value="$(username)" />
+<postfield name="ua" value="$(ua)" />
+<postfield name="url" value="$(url)" />
+</go>确定</anchor><br />
+</p>
+</card>
+</wml>

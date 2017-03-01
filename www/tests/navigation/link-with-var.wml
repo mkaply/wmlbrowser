@@ -1,0 +1,7 @@
+<wml>
+<card title="Link with variable">
+<p>Enter sample text here</p>
+<input type='text' name='name'/>
+<a href="http://wmlbrowser.mozdev.org/tests/wml/form-submission-result.html?name=$(name)" title='Name'>The target of this link should show the text you entered</a>
+</card>
+</wml>

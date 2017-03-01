@@ -1,0 +1,32 @@
+<h1>wmlbrowser options</h1>
+
+<p>Here are the options which you can set in wmlbrowser in version 0.6.</p>
+
+<h2 id="httpAccept" name="httpAccept">Tell web sites that the browser understands WML content</h2>
+<h3>What does this mean?</h3>
+<p>Whenever you send a request for a page to the web, your browser sends
+something called an Accept header, which says what kinds of content the browser
+understands.</p>
+<p>If you set this option, your browser will tell web sites that it understands WML.</p>
+<p>This can cause the web server to send you a different page.</p>
+
+<h3>What's the recommended setting?</h3>
+<p>The best default setting for this is off. Turning it on may mean that you
+get web pages which you weren't expecting, and it's been reported to break
+Hotmail.</p>
+
+<hr width="50%">
+
+<h2 id="loadingFiles" name="loadingFiles">Loading files from the filesystem</h2>
+<h3>What's the problem?</h3>
+
+<p>By default, the wmlbrowser extension allows Mozilla/Firefox to load and
+display WML pages from a web server. But if you have a file on your local disk
+with a ".wml" extension, your browser doesn't know what to do with it.</p>
+
+<p>If you select this option, your browser will know that a .wml file contains
+WML content and will display it appropriately.</p>
+
+<h3>What's the recommended setting?</h3>
+<p>I recommend you leave this setting off unless you know that you need to
+load WML files from your file system.</p>

@@ -1,0 +1,5 @@
+.install { background-color: #11bb11; color: white; border: double 7px white ; padding: 0.5em; text-align: center}
+.title { font-weight: bold ; font-size: larger }
+.install a { color: white; }
+#first { float : left; width: 40%}
+#second { float : right; width: 40% }

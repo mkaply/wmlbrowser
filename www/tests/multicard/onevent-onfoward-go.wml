@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE wml PUBLIC "-//WAPFORUM//DTD WML 1.1//EN" "http://www.wapforum.org/DTD/wml_1.1.xml">
+<wml>
+
+<card id="card" title="onevent/onenterforward/go test">
+  <p>This tests an event triggered by "onenterforward". It should
+  resubmit to a page showing the parameters "test" with value "success"
+  and "postfield" with value "sent".</p>
+  <onevent type="onenterforward">
+    <go href="http://wmlbrowser.mozdev.org/tests/wml/form-submission-result.html?test=success">
+        <postfield name="postfield" value="sent" />
+    </go>
+  </onevent>
+</card>
+
+</wml>
+

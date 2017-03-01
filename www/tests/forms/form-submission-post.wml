@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<wml>
+    <card title="Form submission test">
+        <p>This test demonstrates the form submission via 'POST'.</p>
+        <p>The Firebug extension can be used to prove the 
+        posted data.</p>
+        Username <input type="text" name="login"/>
+        <br/>
+        Password <input type="password" name="password"/>
+        <anchor>Test
+            <go href="http://wmlbrowser.mozdev.org/" method="post">
+              <postfield name="l" value="$login" />
+              <postfield name="p" value="$(password:noesc)" />
+            </go>
+        </anchor>
+    </card>
+</wml>

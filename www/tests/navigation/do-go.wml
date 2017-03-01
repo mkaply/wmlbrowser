@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<!DOCTYPE wml PUBLIC "-//WAPFORUM//DTD WML 1.1//EN" "http://www.wapforum.org/DTD/wml_1.1.xml">
+<wml>
+<card title="DO-GO test">
+    <p>This should go to the wmlbrowser test page.</p>
+    <do label='Test of DO/GO' type='accept'>
+        <go href='http://wmlbrowser.mozdev.org/tests/'/>
+    </do>
+</card>
+</wml>

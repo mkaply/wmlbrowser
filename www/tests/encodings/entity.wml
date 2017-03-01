@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<!DOCTYPE wml PUBLIC "-//WAPFORUM//DTD WML 1.2//EN"
+    "http://www.wapforum.org/DTD/wml12.dtd">
+<wml>
+    <card title="Test of character entity references">
+        <p>Each&nbsp;word&nbsp;is&nbsp;separated&nbsp;by&nbsp;a&nbsp;non-breaking&nbsp;space.</p>
+    </card>
+</wml>

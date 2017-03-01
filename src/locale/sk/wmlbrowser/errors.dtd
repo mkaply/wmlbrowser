@@ -1,0 +1,6 @@
+﻿<!ENTITY errorTitle "wmlbrowser – chyba">
+<!ENTITY shortErrorText "wmlbrowser nevie interpretovať túto stránku.">
+<!ENTITY longErrorText "Stránka bola úspešne prevzatá, ale wmlbrowser zaznamenal chybu pri pokuse o jej interpretáciu.">
+<!ENTITY showDetails "Zobraziť podrobnosti o chybe">
+<!ENTITY hideDetails "Skryť podrobnosti o chybe">
+<!-- vim: set encoding=utf-8: -->

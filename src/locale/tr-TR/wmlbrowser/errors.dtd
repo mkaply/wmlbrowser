@@ -1,0 +1,6 @@
+<!ENTITY errorTitle "Wmlbrowser hatası">
+<!ENTITY shortErrorText "wmlbrowser bu sayfayı yorumlayamadı.">
+<!ENTITY longErrorText "Bu sayfa gerektiği gibi indirildi, ama yorumlanması sırasında wmlbrowser bir sorunla karşılaştı.">
+<!ENTITY showDetails "Hatanın detaylarını göster">
+<!ENTITY hideDetails "Hide details of the error">
+<!-- vim: set encoding=utf-8: -->
