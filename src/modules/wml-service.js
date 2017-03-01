@@ -21,6 +21,7 @@
  * text/vnd.wap.wml (WMLStreamConverter)
  */
 
+const {classes: Cc, interfaces: Ci, utils: Cu} = Components;
 Components.utils.import("resource://gre/modules/XPCOMUtils.jsm");
 Components.utils.import("resource://gre/modules/debug.js");
 
@@ -33,14 +34,8 @@ const WMLSTREAM_CONVERTER_CONTRACTID =
 const WMLSTREAM_CONVERTER_CID =
     Components.ID("{51427b76-8626-4a72-bd5f-2ac0ce5d101a}");
 
-function WMLStreamConverter ()
-{
-    this.logger = Components.classes['@mozilla.org/consoleservice;1']
-        .getService(Components.interfaces.nsIConsoleService);
-};
-
 /* text/vnd.wap.wml -> text/html stream converter */
-WMLStreamConverter.prototype = {
+var WMLStreamConverter = {
   classDescription: "WML to HTML stream converter",
   classID:          Components.ID("{51427b76-8626-4a72-bd5f-2ac0ce5d101a}"),
   contractID:       WMLSTREAM_CONVERTER_CONTRACTID,
@@ -51,16 +46,18 @@ WMLStreamConverter.prototype = {
     category: "@mozilla.org/streamconv;1",
     entry: WMLSTREAM_CONVERT_CONVERSION
   }],
+
+  createInstance: function(outer, iid) {
+     return this.QueryInterface(iid);
+  },
+
   QueryInterface: XPCOMUtils.generateQI(
       [Components.interfaces.nsIStreamConverter,
        Components.interfaces.nsIStreamListener,
        Components.interfaces.nsIRequestObserver
-       ])
-};
-
+       ]),
 // nsIRequestObserver methods
-WMLStreamConverter.prototype.onStartRequest =
-function (aRequest, aContext) {
+  onStartRequest: function (aRequest, aContext) {
 
     this.data = '';
     this.unencodeddata = '';
@@ -78,12 +75,9 @@ function (aRequest, aContext) {
     this.channel.contentCharset = "UTF-8";
 
     this.listener.onStartRequest (this.channel, aContext);
-
-};
-
-// Load the document to be used when our XSLT transformation terminates
-WMLStreamConverter.prototype.getTransformFailureDocument =
-function () {
+  },
+  // Load the document to be used when our XSLT transformation terminates
+  getTransformFailureDocument: function () {
     var failureDocLoad =
         Components.classes["@mozilla.org/xmlextras/xmlhttprequest;1"]
         .createInstance(Components.interfaces.nsIXMLHttpRequest);
@@ -91,13 +85,11 @@ function () {
     failureDocLoad.overrideMimeType("text/xml");
     failureDocLoad.send(undefined);
     return failureDocLoad.responseText;
-}
-
+ },
 /**
  * Return an XSLT processor object.
  */
-WMLStreamConverter.prototype.getXSLTProcessor =
-function () {
+  getXSLTProcessor: function () {
     // Find out what interface we need to use for document transformation
     // (earlier builds used text/xsl)
     var transformerType;
@@ -109,7 +101,7 @@ function () {
     var processor = Components.classes["@mozilla.org/document-transformer;1?type=" + transformerType]
         .createInstance(Components.interfaces.nsIXSLTProcessor);
     return processor;
-}
+  },
 
 /**
  * Determine whether the provided document is an error document,
@@ -117,18 +109,15 @@ function () {
  * @param doc Document to check
  * @return true if the document is an error document
  */
-WMLStreamConverter.prototype.isErrorDocument =
-function (doc) {
+  isErrorDocument: function (doc) {
     var roottag = doc.documentElement;
     return ((roottag.tagName == "parserError") ||
             (roottag.namespaceURI == "http://www.mozilla.org/newlayout/xml/parsererror.xml"));
-}
-
+  },
 /**
  * Serialize an XML document to a string.
  */
-WMLStreamConverter.prototype.serializeToString =
-function (doc) {
+  serializeToString: function (doc) {
     var serializer =
 	Components.classes["@mozilla.org/xmlextras/xmlserializer;1"]
 	.createInstance (Components.interfaces.nsIDOMSerializer);
@@ -146,10 +135,9 @@ function (doc) {
     };
     serializer.serializeToStream (doc, outputStream, "UTF-8");
     return str.data;
-}
+  },
 
-WMLStreamConverter.prototype.onStopRequest =
-function (aRequest, aContext, aStatusCode) {
+  onStopRequest: function (aRequest, aContext, aStatusCode) {
 
     var converter = Components
         .classes["@mozilla.org/intl/scriptableunicodeconverter"]
@@ -223,12 +211,9 @@ function (aRequest, aContext, aStatusCode) {
     this.listener.onDataAvailable (this.channel, aContext, sis, 0, targetDocument.length);
 
     this.listener.onStopRequest (this.channel, aContext, aStatusCode);
-
-};
-
+  },
 // nsIStreamListener methods
-WMLStreamConverter.prototype.onDataAvailable =
-function (aRequest, aContext, aInputStream, aOffset, aCount) {
+onDataAvailable: function (aRequest, aContext, aInputStream, aOffset, aCount) {
 
     // TODO For more recent Mozilla versions, we can use the
     // 'convertFromByteArray' methods.  Creating a string first leaves us with
@@ -257,107 +242,34 @@ function (aRequest, aContext, aInputStream, aOffset, aCount) {
     }
 
     this.unencodeddata += unencoded;
-}
+},
 
 // nsIStreamConverter methods
 // old name (before bug 242184)...
-WMLStreamConverter.prototype.AsyncConvertData =
-function (aFromType, aToType, aListener, aCtxt) {
+AsyncConvertData: function (aFromType, aToType, aListener, aCtxt) {
     this.asyncConvertData (aFromType, aToType, aListener, aCtxt);
-}
+},
 
 // renamed to...
-WMLStreamConverter.prototype.asyncConvertData =
-function (aFromType, aToType, aListener, aCtxt) {
+asyncConvertData: function (aFromType, aToType, aListener, aCtxt) {
     // Store the listener passed to us
     this.listener = aListener;
-}
+},
 
 // Old name (before bug 242184):
-WMLStreamConverter.prototype.Convert =
-function (aFromStream, aFromType, aToType, aCtxt) {
+Convert: function (aFromStream, aFromType, aToType, aCtxt) {
     return this.convert (aFromStream, aFromType, aToType, aCtxt);
-}
+},
 
 // renamed to...
-WMLStreamConverter.prototype.convert =
-function (aFromStream, aFromType, aToType, aCtxt) {
+  convert: function (aFromStream, aFromType, aToType, aCtxt) {
     return aFromStream;
 }
-
-/* stream converter factory object (WMLStreamConverter) */
-/*
-var WMLStreamConverterFactory = new Object();
-
-WMLStreamConverterFactory.createInstance =
-function (outer, iid) {
-    if (outer != null)
-        throw Components.results.NS_ERROR_NO_AGGREGATION;
-
-    if (iid.equals(Components.interfaces.nsISupports) ||
-        iid.equals(Components.interfaces.nsIStreamConverter) ||
-        iid.equals(Components.interfaces.nsIStreamListener) ||
-        iid.equals(Components.interfaces.nsIRequestObserver)) {
-        return new WMLStreamConverter();
-    }
-    throw Components.results.NS_ERROR_INVALID_ARG;
-
-}
-*/
-
-/*
-var WMLBrowserModule = new Object();
-
-WMLBrowserModule.registerSelf =
-function (compMgr, fileSpec, location, type)
-{
-
-    var compMgr = compMgr.QueryInterface(Components.interfaces.nsIComponentRegistrar);
-
-    compMgr.registerFactoryLocation(WMLSTREAM_CONVERTER_CID,
-                                    "WML Stream Converter",
-                                    WMLSTREAM_CONVERTER_CONTRACTID, 
-                                    fileSpec,
-                                    location, 
-                                    type);
-
-    var catman = Components.classes["@mozilla.org/categorymanager;1"]
-                     .getService(Components.interfaces.nsICategoryManager);
-    catman.addCategoryEntry("@mozilla.org/streamconv;1",
-                            WMLSTREAM_CONVERT_CONVERSION,
-                            "WML to HTML stream converter",
-                            true, true);
-
-};
-
-WMLBrowserModule.unregisterSelf =
-function(compMgr, fileSpec, location)
-{
 }
 
-WMLBrowserModule.getClassObject =
-function (compMgr, cid, iid) {
 
-    if (cid.equals(WMLSTREAM_CONVERTER_CID))
-        return WMLStreamConverterFactory;
-
-    if (!iid.equals(Components.interfaces.nsIFactory))
-        throw Components.results.NS_ERROR_NOT_IMPLEMENTED;
-
-    throw Components.results.NS_ERROR_NO_INTERFACE;
-    
-}
-
-WMLBrowserModule.canUnload =
-function(compMgr)
-{
-    return true;
-}
-*/
-
-var components = [WMLStreamConverter];
-
-if (XPCOMUtils.generateNSGetFactory)
-    var NSGetFactory = XPCOMUtils.generateNSGetFactory(components);
-else
-    var NSGetModule = XPCOMUtils.generateNSGetModule(components);
+var registrar = Components.manager.QueryInterface(Ci.nsIComponentRegistrar);
+registrar.registerFactory(WMLStreamConverter.classID,
+                          WMLStreamConverter.classDescription,
+                          WMLStreamConverter.contractID,
+                          WMLStreamConverter);

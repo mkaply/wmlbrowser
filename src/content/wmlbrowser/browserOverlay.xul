@@ -35,6 +35,7 @@
   </toolbox>
 
   <script type="application/x-javascript">
+      Components.utils.import("resource://wmlbrowser/wml.js");
       window.addEventListener("load", function() { _wmlbrowser_initialise(); }, false); 
   </script>
 

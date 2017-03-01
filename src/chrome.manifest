@@ -9,13 +9,10 @@ locale wmlbrowser de    locale/de/wmlbrowser/
 locale wmlbrowser ru-RU locale/ru-RU/wmlbrowser/
 locale wmlbrowser lv-LV locale/lv-LV/wmlbrowser/
 skin wmlbrowser classic/1.0 skin/wmlbrowser/
+resource wmlbrowser modules/
 overlay chrome://browser/content/browser.xul chrome://wmlbrowser/content/browserOverlay.xul
 style chrome://global/content/customizeToolbar.xul chrome://wmlbrowser/skin/browser.css
 
 # Fennec
 override chrome://wmlbrowser/content/prefs/firefox-1-5-prefs.xul chrome://wmlbrowser/content/prefs/fennec-options.xul application={a23983c0-fd0e-11dc-95ff-0800200c9a66}
 override chrome://wmlbrowser/content/browserOverlay.xul chrome://wmlbrowser/content/fennecOverlay.xul application={a23983c0-fd0e-11dc-95ff-0800200c9a66}
-
-# FF4 component registration
-component {51427b76-8626-4a72-bd5f-2ac0ce5d101a} components/wml-service.js
-contract @mozilla.org/streamconv;1?from=text/vnd.wap.wml&to=*/* {51427b76-8626-4a72-bd5f-2ac0ce5d101a}
